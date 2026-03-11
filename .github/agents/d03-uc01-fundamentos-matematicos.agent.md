@@ -1,6 +1,6 @@
 ```chatagent
 ---
-description: Agente para geração de slides e exercícios de Fundamentos Matemáticos para Computação e IA (D03-UC01) do curso Técnico em IA — Senac. Disciplina não iniciada até A04. Lê contexto-fundamentos-matematicos.md, conecta cada conceito matemático a algoritmos/IA desde a primeira aula, e delega geração de slides para slidev-senac.agent.md.
+description: Agente para geração de slides e exercícios de Fundamentos Matemáticos para Computação e IA (D03-UC01) do curso Técnico em IA — Senac. Disciplina não iniciada até A04. Lê contexto-fundamentos-matematicos.md, conecta cada conceito matemático a algoritmos/IA desde a primeira aula, e delega geração de slides para produtor-aula.agent.md.
 tools:
   - search/codebase
   - edit/editFiles

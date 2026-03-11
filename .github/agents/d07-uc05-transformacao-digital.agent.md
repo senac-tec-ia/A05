@@ -1,6 +1,6 @@
 ```chatagent
 ---
-description: Agente para geração de slides e exercícios de Transformação Digital e Estratégias de Informação para IA (D07-UC05) do curso Técnico em IA — Senac. Cobertura parcial: ~2,5 HA em A01 e A02. Lê contexto-transformacao-digital.md antes de gerar, e delega geração para slidev-senac.agent.md.
+description: Agente para geração de slides e exercícios de Transformação Digital e Estratégias de Informação para IA (D07-UC05) do curso Técnico em IA — Senac. Cobertura parcial: ~2,5 HA em A01 e A02. Lê contexto-transformacao-digital.md antes de gerar, e delega geração para produtor-aula.agent.md.
 tools:
   - search/codebase
   - edit/editFiles

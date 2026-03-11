@@ -10,12 +10,13 @@ This repository is a **Slidev lesson deck** for the *Técnico em Inteligência A
 
 | Task | Invoke |
 |---|---|
-| Planejar composição do dia ou calcular HA restantes | `@orquestrador-1ano` |
-| Gerar aula completa (slides + exercícios) | `@slidev-senac` |
-| Gerar **apenas slides** (teoria, debate, dinâmica) | `@slidev-writer` |
-| Gerar **apenas exercicios.md + tarefa.md** | `@exercise-builder` |
-| Audit slide order, tags, UC labels | `@verificador-estrutura-aula` |
-| Reorder or insert structural slides | `@verificador-estrutura-aula` |
+| Planejar composição do dia ou calcular HA restantes | `@planejador-trimestre` |
+| Gerar aula completa (slides + exercícios) | `@produtor-aula` |
+| Gerar **apenas slides** (teoria, debate, dinâmica) | `@autor-slides` |
+| Gerar **apenas exercicios.md + tarefa.md** | `@autor-exercicios` |
+| Revisar/refinar slides gerados (modo plan, slide a slide) | `@editor-slides --mode=review` |
+| Editar slides por instrução explcícita | `@editor-slides --mode=edit` |
+| Audit slide order, tags, UC labels | `@auditor-estrutura` |
 | D01-UC01 Fundamentos de Computação | `@d01-uc01-fundamentos-computacao` |
 | D02-UC01 Inglês Instrumental | `@d02-uc01-ingles-instrumental` |
 | D03-UC01 Fundamentos Matemáticos | `@d03-uc01-fundamentos-matematicos` |
@@ -26,15 +27,17 @@ This repository is a **Slidev lesson deck** for the *Técnico em Inteligência A
 | D08-UC06 Banco de Dados | `@d08-uc06-banco-de-dados` |
 | D09-UC07 Estatística Aplicada | `@d09-uc07-estatistica-aplicada` |
 
-**Regra de separação:** `@slidev-writer` NUNCA toca `exercicios.md`. `@exercise-builder` NUNCA toca `slides.md`. Sempre seguir o Handoff Card como contrato entre as camadas.
+**Regra de separação:** `@autor-slides` NUNCA toca `exercicios.md`. `@autor-exercicios` NUNCA toca `slides.md`. `@editor-slides` NUNCA age por regras automáticas (isso é papél do `@auditor-estrutura`). Sempre seguir o Handoff Card como contrato entre as camadas.
 
-**Never mix tasks in one session.** If the user asks for both new content AND a structural audit, run `@verificador-estrutura-aula` first, wait for confirmation, then run `@slidev-senac`.
+**Sequência obrigatória de refinamento:** `@editor-slides` → `@auditor-estrutura`. Nunca o inverso.
+
+**Never mix tasks in one session.** If the user asks for both new content AND a structural audit, run `@auditor-estrutura` first, wait for confirmation, then run `@produtor-aula`.
 
 ---
 
 ## Handoff Card — Contrato entre Camadas
 
-O Handoff Card é o output de cada agente disciplinar (`@d01`–`@d09`) e o input de `@slidev-writer` e `@exercise-builder`. Sempre solicitar um Handoff Card antes de gerar conteúdo.
+O Handoff Card é o output de cada agente disciplinar (`@d01`–`@d09`) e o input de `@autor-slides` e `@autor-exercicios`. Sempre solicitar um Handoff Card antes de gerar conteúdo.
 
 ```markdown
 ## Handoff Card: D0X-UC0X / A0N / N HA
@@ -71,7 +74,7 @@ Before generating any lesson content, read the UC context file(s) for the discip
 | D08-UC06 | Banco de Dados | `.github/agents/contexto-banco-de-dados.md` |
 | D09-UC07 | Estatística Aplicada | `.github/agents/contexto-estatistica-aplicada.md` |
 
-If a context file does not yet exist for a UC, create it using the standard format defined in `.github/agents/slidev-senac.agent.md § 10`.
+If a context file does not yet exist for a UC, create it using the standard format defined in `.github/agents/referencia-tecnica.md § 9`.
 
 **Rules when using context files:**
 - Never introduce a concept at the same depth it was previously introduced — deepen or apply it.

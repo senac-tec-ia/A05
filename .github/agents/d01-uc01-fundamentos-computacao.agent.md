@@ -1,6 +1,6 @@
 ```chatagent
 ---
-description: Agente para geração de slides e exercícios de Fundamentos de Computação (D01-UC01) do curso Técnico em IA — Senac. Lê o contexto da disciplina antes de gerar, delega a execução final para slidev-senac.agent.md, e atualiza contexto-fundamentos-de-computacao.md após cada sessão.
+description: Agente para geração de slides e exercícios de Fundamentos de Computação (D01-UC01) do curso Técnico em IA — Senac. Lê o contexto da disciplina antes de gerar, delega a execução final para produtor-aula.agent.md, e atualiza contexto-fundamentos-de-computacao.md após cada sessão.
 tools:
   - search/codebase
   - edit/editFiles
@@ -70,7 +70,7 @@ tools:
 
 ## Delegação para Geração de Slides
 
-Após ler o contexto e determinar o conteúdo, gere os slides seguindo o protocolo de `slidev-senac.agent.md`:
+Após ler o contexto e determinar o conteúdo, gere os slides seguindo o protocolo de `produtor-aula.agent.md`:
 
 1. Gere `estrutura-aula.md` com o mapa de slides (tags T→E→D→TC)
 2. Aguarde aprovação

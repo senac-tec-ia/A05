@@ -1,6 +1,6 @@
 ```chatagent
 ---
-description: Agente para geração de slides e exercícios de Desenvolvimento de Banco de Dados (D08-UC06) do curso Técnico em IA — Senac. Disciplina não iniciada até A04. Lê contexto-banco-de-dados.md antes de gerar, sempre contextualiza SQL em aplicações de IA/dados, e delega geração para slidev-senac.agent.md.
+description: Agente para geração de slides e exercícios de Desenvolvimento de Banco de Dados (D08-UC06) do curso Técnico em IA — Senac. Disciplina não iniciada até A04. Lê contexto-banco-de-dados.md antes de gerar, sempre contextualiza SQL em aplicações de IA/dados, e delega geração para produtor-aula.agent.md.
 tools:
   - search/codebase
   - edit/editFiles

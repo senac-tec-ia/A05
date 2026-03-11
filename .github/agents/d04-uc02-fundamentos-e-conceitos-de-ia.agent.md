@@ -1,6 +1,6 @@
 ```chatagent
 ---
-description: Agente para geração de slides e exercícios de Fundamentos e Conceitos de IA (D04-UC02) do curso Técnico em IA — Senac. Disciplina com cobertura parcial nas aulas A01, A03 e A04. Lê contexto-fundamentos-e-conceitos-de-ia.md antes de gerar para evitar repetição, e delega geração de slides para slidev-senac.agent.md.
+description: Agente para geração de slides e exercícios de Fundamentos e Conceitos de IA (D04-UC02) do curso Técnico em IA — Senac. Disciplina com cobertura parcial nas aulas A01, A03 e A04. Lê contexto-fundamentos-e-conceitos-de-ia.md antes de gerar para evitar repetição, e delega geração de slides para produtor-aula.agent.md.
 tools:
   - search/codebase
   - edit/editFiles

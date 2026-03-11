@@ -1,6 +1,6 @@
 ```chatagent
 ---
-description: Agente para geração de slides e exercícios de Desenvolvimento de Linguagem Python (D05-UC03) do curso Técnico em IA — Senac. Disciplina com maior carga horária (80 HA). Lê contexto-python-para-ia.md antes de gerar, sempre usa exemplos de contexto IA/dados, e delega geração para slidev-senac.agent.md.
+description: Agente para geração de slides e exercícios de Desenvolvimento de Linguagem Python (D05-UC03) do curso Técnico em IA — Senac. Disciplina com maior carga horária (80 HA). Lê contexto-python-para-ia.md antes de gerar, sempre usa exemplos de contexto IA/dados, e delega geração para produtor-aula.agent.md.
 tools:
   - search/codebase
   - edit/editFiles

@@ -317,7 +317,7 @@ Os seguintes termos foram introduzidos nas aulas A01–A04 dentro de D01-UC01 e 
 ### Hierarquia
 
 ```
-orquestrador-1ano.agent.md        ← leia primeiro: calendário + routing
+planejador-trimestre.agent.md     ← leia primeiro: calendário + routing
 │
 ├── d01-uc01-fundamentos-computacao.agent.md
 ├── d02-uc01-ingles-instrumental.agent.md
@@ -329,7 +329,7 @@ orquestrador-1ano.agent.md        ← leia primeiro: calendário + routing
 ├── d08-uc06-banco-de-dados.agent.md
 └── d09-uc07-estatistica-aplicada.agent.md
     │
-    └── Cada um delega geração de slides para → slidev-senac.agent.md
+    └── Cada um delega geração de slides para → produtor-aula.agent.md
 ```
 
 ### Arquivos de contexto (memória viva)
