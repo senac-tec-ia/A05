@@ -94,7 +94,8 @@ If a context file does not yet exist for a UC, create it using the standard form
 7. **Starter code:** Every coding exercise must include a starter code block with the function signature already written. Students never start from a blank file.
 8. **Context-first rule:** Every coding example in this course should use AI/data themes (tokens, model outputs, datasets) — not generic math calculators or unrelated domains.
 9. **Table-code separation:** A table and a code block must NEVER appear on the same slide. If both are needed, split into two slides: one with the table, one with the code. Two tables on the same slide are also forbidden. Two code blocks on the same slide (`default` layout) are forbidden — use `two-cols-text` only if each column genuinely has its own independent block.
-10. **One concept per intro slide:** When introducing an operator (`and`, `or`, `not`, `==`, etc.), a keyword (`if`, `for`, `while`, etc.), or a built-in function (`len()`, `abs()`, etc.) for the **first time**, give it its own slide. That slide must contain: the term in English (code notation) + its Portuguese translation + what it does in one sentence + one minimal example. Never introduce two new concepts on the same slide.
+11. **Scope guard for non-Python disciplines:** When adding Python code examples to Matemática, Estatística, or any non-UC05 discipline, use only constructs already listed under `Conceitos Consolidados` in `.github/agents/contexto-python-para-ia.md`. Never use `for`, `while`, lists, or dictionaries in slides of other disciplines before those topics are taught in UC05.
+12. **Tool and agent transparency:** At the end of every response, include a `## Ferramentas e Agentes Usados` section listing: (a) every agent invoked (e.g., `@autor-slides`, `@auditor-estrutura`) and (b) every tool used (e.g., `edit/editFiles`, `search/codebase`). Tool identifiers stay in English as technical names; the section title and explanations are in pt-BR.
 
 ---
 
@@ -118,7 +119,9 @@ Before ending any content-generation session, verify:
 - [ ] Every class block (`aulaNum`) follows the T→E→D→TC order
 - [ ] No more than 2 consecutive `[TEORIA]` slides without interaction
 - [ ] All coding exercises have starter code
+- [ ] No Python constructs used in non-UC05 slides that haven't been taught yet
 - [ ] UC context file(s) updated with what was covered today
 - [ ] `estrutura-aula.md` synced to the final slide count
 - [ ] No em-dash anywhere in slide content
 - [ ] `meta.yaml` `status` field updated to `ready` or `published`
+- [ ] Response ends with a `## Ferramentas e Agentes Usados` section

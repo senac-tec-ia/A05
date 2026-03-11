@@ -1,11 +1,11 @@
 ---
 # ─────────────────────────────────────────────────────────────────
-#  A05 — 12/03/2026 — Python: Operadores, Strings e Condicionais · Matemática · Estatística
+#  A05 · 12/03/2026 · Python: Operadores, Strings e Condicionais · Matemática · Estatística
 # ─────────────────────────────────────────────────────────────────
 theme: ./
 colorSchema: dark
 
-title: "Técnico em IA — Aula 05"
+title: "Técnico em IA: Aula 05"
 author: Leonardo Zanini
 courseTitle: Técnico em Inteligência Artificial
 aulaNum: "Aula 05"
@@ -34,8 +34,8 @@ bgPreset: default
 ## `x = 5` vs `x = '5'`
 
 ```python
-x = 5      # número inteiro — int
-y = '5'    # texto — str
+x = 5      # número inteiro : int
+y = '5'    # texto: str
 
 print(x + x)   # 10  → somou
 print(y + y)   # '55' → colou junto
@@ -62,8 +62,8 @@ bgPreset: default
 # Aspas em Python: `'` ou `"` ?
 
 ```python
-nome = 'Ana'        # aspas simples — funciona
-cidade = "Maceió"   # aspas duplas  — também funciona
+nome = 'Ana'        # aspas simples: funciona
+cidade = "Maceió"   # aspas duplas: também funciona
 
 # use duplas quando tiver apóstrofo dentro:
 frase = "it's Python"   # ✅
@@ -116,7 +116,7 @@ bgPreset: default
 <!-- SLIDE 5 - Consolidação: print() e f-string -->
 <!-- objetivo: fixar print() e f-string como ferramenta de saída antes de entrar em loops -->
 
-# `print()` — Fixando a Ferramenta
+# `print()`: Fixando a Ferramenta
 
 ```python
 # print() mostra qualquer coisa na tela
@@ -180,7 +180,7 @@ bgPreset: default
 # Cuidado com as Armadilhas de Tipo
 
 ```python
-# "3" é str — não é o número 3!
+# "3" é str, não é o número 3!
 x = "3"
 y = 3
 
@@ -204,11 +204,11 @@ bgPreset: default
 ---
 
 <!-- SLIDE 8 - Aquecimento: identifique o tipo -->
-<!-- objetivo: consolidar tipos com exercício de leitura — prática antes de loops -->
+<!-- objetivo: consolidar tipos com exercício de leitura: prática antes de loops -->
 
-# Aquecimento — Qual o Tipo?
+# Aquecimento: Qual o Tipo?
 
-**Individual · 5 minutos · Nível 0 — sem digitar ainda**
+**Individual · 5 minutos · Nível 0 · sem digitar ainda**
 
 Leia cada linha e escreva o tipo no caderno (`str`, `int`, `float`, `bool`):
 
@@ -276,21 +276,21 @@ bgPreset: default
 Toda comparação retorna `True` ou `False`:
 
 ```python
-10 == 10    # True  — igual a
-10 != 9     # True  — diferente de
-10 > 5      # True  — maior que
-5 < 10      # True  — menor que
-10 >= 10    # True  — maior ou igual
-5 <= 10     # True  — menor ou igual
+10 == 10    # True: igual a
+10 != 9     # True: diferente de
+10 > 5      # True: maior que
+5 < 10      # True: menor que
+10 >= 10    # True: maior ou igual
+5 <= 10     # True: menor ou igual
 ```
 
 <v-click>
 
 ```python
 nota = 7.5
-print(nota >= 7)    # True  — aprovado!
-print(nota == 10)   # False — não é nota máxima
-print(nota < 5)     # False — não está reprovado
+print(nota >= 7)    # True: aprovado!
+print(nota == 10)   # False: não é nota máxima
+print(nota < 5)     # False: não está reprovado
 ```
 
 > O resultado é sempre `bool`: `True` ou `False`. Esse valor pode ser guardado em variável ou usado direto num `if`.
@@ -351,22 +351,37 @@ nota = 7.5
 frequencia = 0.80
 
 # and: as DUAS precisam ser True
-nota >= 7 and frequencia >= 0.75    # True — aprovado
+nota >= 7 and frequencia >= 0.75    # True: aprovado
 
 # or: PELO MENOS UMA precisa ser True
-nota >= 7 or frequencia >= 0.75     # True — alguma condição
+nota >= 7 or frequencia >= 0.75     # True: pelo menos uma condição
 
 # not: inverte o resultado
-not (nota >= 7)                     # False — não é True
+not (nota >= 7)                     # False: resultado invertido
 ```
 
-<v-click>
+> `and` exige as duas condições. `or` aceita qualquer uma. `not` vira o resultado de cabeça para baixo.
 
-| Operador | Resultado True quando... |
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 12b - Tabela de operadores lógicos -->
+<!-- objetivo: resumo visual dos operadores lógicos -->
+
+# Operadores Lógicos: Resumo
+
+| Operador | Resultado `True` quando... |
 |---|---|
 | `a and b` | `a` E `b` são True |
 | `a or b` | `a` OU `b` são True |
 | `not a` | `a` é False |
+
+<v-click>
+
+> `and` = as DUAS devem ser verdade. `or` = pelo menos uma. `not` = inverte. Próximo: usar esses operadores dentro de `if`.
 
 </v-click>
 
@@ -454,11 +469,11 @@ Strings têm ferramentas prontas. Use o `.` para chamar:
 ```python
 modelo = "  GPT-4 Turbo  "
 
-len(modelo)               # 16  — tamanho (conta espaços!)
-modelo.strip()            # "GPT-4 Turbo"  — remove espaços das pontas
-modelo.upper()            # "  GPT-4 TURBO  "  — tudo maiúsculo
-modelo.lower()            # "  gpt-4 turbo  "  — tudo minúsculo
-modelo.replace("4", "5")  # "  GPT-5 Turbo  "  — troca trecho
+len(modelo)               # 16: tamanho (conta espaços!)
+modelo.strip()            # "GPT-4 Turbo": sem espaços nas pontas
+modelo.upper()            # "  GPT-4 TURBO  ": tudo maiúsculo
+modelo.lower()            # "  gpt-4 turbo  ": tudo minúsculo
+modelo.replace("4", "5")  # "  GPT-5 Turbo  ": troca trecho
 ```
 
 <v-click>
@@ -519,19 +534,19 @@ bgPreset: default
 # Funções de Número
 
 ```python
-# abs() — valor absoluto (sem sinal negativo)
+# abs(): valor absoluto (sem sinal negativo)
 abs(-7.5)           # 7.5
 abs(3)              # 3
 
-# round() — arredonda para N casas decimais
+# round(): arredonda para N casas decimais
 round(3.14159, 2)   # 3.14
-round(7.5)          # 8    — arredonda para inteiro
+round(7.5)          # 8: arredonda para inteiro
 
 # conversores: traduzem entre tipos
-int("14")           # 14   — str para int
-int(9.9)            # 9    — float para int (corta, não arredonda!)
-float("9.5")        # 9.5  — str para float
-str(42)             # "42" — int para str
+int("14")           # 14: str para int
+int(9.9)            # 9: float para int (corta, não arredonda!)
+float("9.5")        # 9.5: str para float
+str(42)             # "42": int para str
 ```
 
 <v-click>
@@ -866,24 +881,26 @@ bgPreset: default
 
 <!-- SLIDE 19 - EX05 -->
 
-# EX05 - Tabela da Equação Linear
+# EX05 - Calculando a Equação Linear
 
 **Em dupla · 10 minutos · Nível 2**
 
-Gere a tabela de valores para `y = 2x + 5`:
+Calcule os valores de `y = 2x + 5` para cada x:
 
 ```python
-# EX05 - Tabela da Equação Linear
+# EX05 - Calculando a Equação Linear
+# (chamadas explícitas: loops são conteúdo de A06)
 def calcular_y(x):
     """Retorna y para a equação y = 2x + 5"""
     return ___   # complete a equação aqui
 
-# gerar tabela para x de 0 a 5
-print("x  |  y = 2x + 5")
-print("---|-------------")
-for x in range(___):       # de 0 até 5 inclusive
-    y = calcular_y(x)
-    print(f"{x}  |  {y}")
+# calcule e imprima para os valores de x abaixo:
+print(f"x=0: y = {calcular_y(0)}")    # esperado: y = 5
+print(f"x=1: y = {calcular_y(1)}")    # esperado: y = 7
+print(f"x=2: y = {calcular_y(2)}")    # esperado: y = 9
+print(f"x=3: y = {calcular_y(3)}")    # esperado: y = 11
+print(f"x=4: y = {calcular_y(4)}")    # esperado: y = 13
+print(f"x=5: y = {calcular_y(5)}")    # esperado: y = 15
 ```
 
 > Resultado: quando x=0, y=5. Quando x=3, y=11.
@@ -949,7 +966,7 @@ bgPreset: default
 
 <v-click>
 
-**Definição:** `y = f(x)` — para cada entrada `x`, há exatamente uma saída `y`
+**Definição:** `y = f(x)`: para cada entrada `x`, há exatamente uma saída `y`
 
 > A forma mais simples é a **função linear**: `y = ax + b`
 
@@ -962,7 +979,7 @@ bgPreset: default
 ---
 
 <!-- SLIDE 23 - Função linear coeficientes -->
-<!-- objetivo: compreender os coeficientes a e b de uma função linear e sua representação gráfica -->
+<!-- objetivo: compreender os coeficientes a e b de uma função linear -->
 
 # Função Linear: `y = ax + b`
 
@@ -977,6 +994,21 @@ bgPreset: default
 
 <v-click>
 
+> Conexão direta com o EX05: você já calculou isso! Agora temos o nome matemático.
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 23b - Função linear exemplo de cálculo -->
+<!-- objetivo: mostrar como calcular y = ax + b para valores concretos de x -->
+
+# Função Linear: Calculando na Prática
+
 ```python
 # a=2, b=5: y cresce 2 unidades para cada 1 de x
 # x=0  ->  y = 2(0) + 5 =  5
@@ -984,11 +1016,9 @@ bgPreset: default
 # x=3  ->  y = 2(3) + 5 = 11
 ```
 
-</v-click>
-
 <v-click>
 
-> Conexão direta com o EX05: você já calculou isso! Agora temos o nome matemático.
+> Em IA, a equação `y = ax + b` descreve o neurônio mais simples. `a` é o **peso** e `b` é o **viés** (bias). Treinar um modelo é encontrar os melhores valores de `a` e `b`.
 
 </v-click>
 
@@ -1000,14 +1030,15 @@ bgPreset: default
 
 <!-- SLIDE 24 - EX06 -->
 
-# EX06 - Tabela da Função Linear
+# EX06 - Calculando a Função Linear
 
 **Individual · 8 minutos · Nível 1**
 
 Calcule os valores para `f(x) = 3x - 1`:
 
 ```python
-# EX06 - Tabela da Função Linear
+# EX06 - Calculando a Função Linear
+# (chamadas explícitas: loops são conteúdo de A06)
 def f_linear(x, a, b):
     """Calcula y = ax + b para os coeficientes dados"""
     return ___   # complete a função
@@ -1016,11 +1047,13 @@ def f_linear(x, a, b):
 a = 3
 b = -1
 
-print("x  |  f(x) = 3x - 1")
-print("---|------------------")
-for x in range(6):    # x de 0 a 5
-    y = f_linear(x, a, b)
-    print(f"{x}  |  {y}")
+# calcule e imprima para cada valor de x:
+print(f"f(0) = {f_linear(0, a, b)}")   # esperado: -1
+print(f"f(1) = {f_linear(1, a, b)}")   # esperado:  2
+print(f"f(2) = {f_linear(2, a, b)}")   # esperado:  5
+print(f"f(3) = {f_linear(3, a, b)}")   # esperado:  8
+print(f"f(4) = {f_linear(4, a, b)}")   # esperado: 11
+print(f"f(5) = {f_linear(5, a, b)}")   # esperado: 14
 ```
 
 > Quando x=0: f(0) = -1. Quando x=2: f(2) = 5.
@@ -1035,17 +1068,17 @@ bgPreset: animate
 
 # Tarefa A05
 
-**Entrega: próxima aula (13/03) · Arquivo:** `tarefa_05_loops_algebra.py`
+**Entrega: próxima aula (13/03) · Arquivo:** `tarefa_05_operadores_algebra.py`
 
 <v-click>
 
-**Parte 1 - Python:** Dado o dataset `[0.91, None, 0.73, "", 0.85, 0.44, None]`, escreva um loop que filtre apenas os `float` e calcule a média das acurácias válidas.
+**Parte 1 - Python:** Escreva uma função `formatar_resultado(nome, acuracia)` que recebe o nome sujo de um modelo (pode ter espaços extras) e sua acurácia bruta. A função deve: limpar o nome com `.strip().upper()`, arredondar a acurácia para 2 casas com `round()`, e retornar uma string no formato `"NOME: xx%"` usando f-string. Exemplo: `formatar_resultado("  gpt-4  ", 0.9166)` retorna `"GPT-4: 0.92%"`.
 
 </v-click>
 
 <v-click>
 
-**Parte 2 - Matemática:** Usando `f_linear()`, gere a tabela de `y = 3x + 2` para `x` de 0 a 9 e imprima cada par `(x, y)`.
+**Parte 2 - Matemática:** Usando a função `f_linear(x, a, b)` do EX06, calcule e imprima os pares `(x, y)` para `y = 3x + 2` com x de 0 a 9, chamando a função uma vez por linha.
 
 </v-click>
 

@@ -1,10 +1,10 @@
 # Contexto — Desenvolvimento de Linguagem Python (UC05)
 
 **Código:** UC05  
-**UC:** UC03 — Desenvolvimento de Linguagem Python  
+**UC:** UC05 — Desenvolvimento de Linguagem Python  
 **Disciplina:** Python para IA  
 **Carga Total:** 67h (80 HA) | `T1: 26 HA (ajustado: 20) · T2: 27 HA · T3: 27 HA`  
-**Peso no dia:** Pesado (3 HA/bloco — sempre no Bloco 1)
+**Peso no dia:** Pesado (3 HA/bloco, sempre no Bloco 1)
 
 ---
 
@@ -12,7 +12,7 @@
 
 | Trim. | HA Alocado | HA Dado | HA Restante |
 |---|---|---|---|
-| T1 | 20 (ajustado) | 5,5 | 14,5 |
+| T1 | 20 (ajustado) | 8,5 | 11,5 |
 | T2 | 27 | 0 | 27 |
 | T3 | 27 | 0 | 27 |
 
@@ -34,14 +34,10 @@
 | Aula | Data | HA (D05) | Tópicos Principais | Status |
 |---|---|---|---|---|
 | A01 | 26/02/2026 | 0 | Não trabalhada | - |
-| A02 | 27/02/2026 | ~0,5 | Reconhecimento do ambiente: VS Code, Google Colab, GitHub, Jupyter Notebook — onde rodar Python | Ministrada |
+| A02 | 27/02/2026 | ~0,5 | Reconhecimento do ambiente: VS Code, Google Colab, GitHub, Jupyter Notebook, onde rodar Python | Ministrada |
 | A03 | 05/03/2026 | 0 | Não trabalhada | - |
-| A04 | 06/03/2026 | ~2 | Variáveis, tipos (str/int/float/bool), `print()`, `input()`, operadores aritmeticos, `if/elif/else`, `def/return`, ecossistema Python (Jupyter/Colab, pip, SQL, Markdown, JSON, YAML) | Ministrada |
-| A05 | 12/03/2026 | ~3 | Loops: `for`, `while`, `break`, `continue`; Listas: criação, `append`, indexação, `len`, `max`, `min`; Dinâmica: purificador de dataset com filtro de tipo | Ministrada |
-
----
-
-## Conceitos Consolidados (não reintroduzir no mesmo nível)
+| A04 | 06/03/2026 | ~2 | Variáveis, tipos (str/int/float/bool), `print()`, `input()`, operadores aritméticos, `if/elif/else`, `def/return`, ecossistema Python (Jupyter/Colab, pip, SQL, Markdown, JSON, YAML) | Ministrada |
+| A05 | 12/03/2026 | ~3 | Operadores de comparação (`==`, `!=`, `<`, `>`, `<=`, `>=`); operadores lógicos (`and`, `or`, `not`); condicionais `if/elif/else` com múltiplas condições; funções de string (`.strip()`, `.upper()`, `.lower()`, `.replace()`, `len()`); funções de número (`abs()`, `round()`, `int()`, `float()`, `str()`); f-string avançada | Ministrada |
 
 ---
 
@@ -57,31 +53,38 @@
 | Condicionais: `if/elif/else` | A04 | Introdutório |
 | Funções: `def`, parâmetros, `return` | A04 | Introdutório |
 | Ecossistema Python (pip, Jupyter, SQL, Markdown, JSON) | A04 | Reconhecimento |
+| Operadores de comparação: `==`, `!=`, `<`, `>`, `<=`, `>=` | A05 | Introdutório |
+| Operadores lógicos: `and`, `or`, `not` | A05 | Introdutório |
+| Condicionais com múltiplas condições e lógica combinada | A05 | Intermediário |
+| Funções de string: `.strip()`, `.upper()`, `.lower()`, `.replace()`, `len()` | A05 | Introdutório |
+| Funções de número: `abs()`, `round()`, `int()`, `float()`, `str()` | A05 | Introdutório |
+| f-string com expressões dentro de `{}` | A05 | Intermediário |
 
 ---
 
-## Tópicos Pendentes no T1 (17,5 HA restantes)
+## Tópicos Pendentes no T1 (11,5 HA restantes)
 
-**Ponto de partida obrigatório: não rever variáveis, tipos, print, input, operadores, condicionais, def/return — já consolidados em A04.**
+**Ponto de partida obrigatório: não rever variáveis, tipos, print, input, operadores aritméticos, condicionais, def/return (A04) nem operadores de comparação/lógicos, funções de string/número, f-string (A05). Já consolidados.**
 
 | Seq. | Tópico | HA | Ind. |
 |---|---|---|---|
-| 1 | ~~Loops: `for`, `while`, `break`, `continue`~~ | ~~3~~ | ~~1~~ | **CONCLUÍDO em A05** |
-| ~~Listas: criação, indexação, `append`, `for` sobre listas~~ | ~~3~~ | ~~1~~ | **CONCLUÍDO em A05** |
-| 3 | Funções avançadas: parâmetros default, `*args`, docstrings, escopo | 2 | 1 |
-| 4 | Módulos e importações: `import`, `random`, `math`, `os` | 2 | 2 |
-| 5 | Leitura e escrita de arquivos: `open()`, `read()`, `write()`, `.csv` | 2 | 2 |
-| 6 | Tratamento de erros: `try/except` | 2 | 1 |
-| 7 | Exercício integrador: mini-projeto com lista de dados de IA | 3 | 1, 2 |
+| 1 | Loops: `for`, `while`, `break`, `continue` | 2 | 1 |
+| 2 | Listas: criação, indexação, `append`, `len`, `max`, `min`, `for` sobre listas | 2 | 1 |
+| 3 | Dicionários: criação, acesso por chave, `.keys()`, `.values()`, `.items()` | 2 | 1 |
+| 4 | Funções avançadas: parâmetros default, `*args`, docstrings, escopo | 2 | 1 |
+| 5 | Módulos e importações: `import`, `random`, `math`, `os` | 2 | 2 |
+| 6 | Leitura e escrita de arquivos: `open()`, `read()`, `write()`, `.csv` | 2 | 2 |
+| 7 | Tratamento de erros: `try/except` | 1 | 1 |
+| 8 | Exercício integrador: mini-projeto com lista de dados de IA | 1,5 | 1, 2 |
 
 ---
 
 ## Recomendações para o Próximo Encontro
 
-> A05 consolidou: for, while, break, continue, listas (append, indexação, len, max, min).
-> A06 (próximo encontro com D05) deve continuar com funções avançadas ou módulos.
-> Não rever for/while/listas no mesmo nível — aprofundar ou combinar com outras estruturas.
-> Considerar list comprehension ou dicionários como próximo bloco estrutural.
+> A05 consolidou: operadores de comparação, operadores lógicos, if/elif/else com múltiplas condições, funções de string (.strip/.upper/.lower/.replace/len), funções de número (abs/round/int/float/str), f-string.
+> A06 (próximo encontro com D05) deve iniciar loops: começar com `for` sobre `range()`, depois `while`, `break`, `continue`.
+> Introduzir listas logo após loops, usando contexto de datasets de IA.
+> Regra: todo exemplo de loop deve ter analogia do cotidiano (playlist, fila, lista de chamada) ANTES do contexto IA.
 
 ---
 
