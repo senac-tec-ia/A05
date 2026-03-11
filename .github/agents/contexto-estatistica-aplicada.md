@@ -11,7 +11,7 @@
 
 | Trim. | HA Alocado | HA Dado | HA Restante |
 |---|---|---|---|
-| T1 | 11 (ajustado) | 0 | 11 |
+| T1 | 11 (ajustado) | 1 | 10 |
 | T2 | 14 | 0 | 14 |
 | T3 | 13 | 0 | 13 |
 
@@ -42,8 +42,7 @@
 | A02 | 27/02/2026 | 0 | Não trabalhada |
 | A03 | 05/03/2026 | 0 | Não trabalhada |
 | A04 | 06/03/2026 | 0 | Não trabalhada |
-
-**Disciplina não iniciada até A04. Iniciar o quanto antes — T1 termina 15/05.**
+| A05 | 12/03/2026 | ~1 | **INICIO:** Conceito de função `y = f(x)`, função linear `y = ax + b`, coeficiente angular `a` e coeficiente linear `b`, implementação em Python: `def f_linear(x, a, b): return a*x + b` |
 
 ---
 
@@ -77,7 +76,9 @@ Conceitos que os alunos já têm (relevantes para esta disciplina):
 
 | Termo | Definição | Status |
 |---|---|---|
-| função linear | f(x) = ax + b — relação proporcional | Pendente |
+| função linear | f(x) = ax + b — relação proporcional | **Introduzido A05** |
+| coeficiente angular | `a` = inclinação da reta | **Introduzido A05** |
+| coeficiente linear | `b` = onde a reta cruza o eixo y | **Introduzido A05** |
 | regressão linear | modelo que ajusta uma reta a dados | Pendente |
 | coeficiente angular | `a` em `ax + b` — inclinação da reta | Pendente |
 | função quadrática | f(x) = ax² + bx + c — parábola | Pendente |

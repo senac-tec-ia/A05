@@ -11,7 +11,7 @@
 
 | Trim. | HA Alocado | HA Dado | HA Restante |
 |---|---|---|---|
-| T1 | 13 | 0 | 13 |
+| T1 | 13 | 2 | 11 |
 | T2 | 14 | 0 | 14 |
 | T3 | 13 | 0 | 13 |
 
@@ -38,8 +38,7 @@
 | A02 | 27/02/2026 | 0 | Não trabalhada |
 | A03 | 05/03/2026 | 0 | Não trabalhada |
 | A04 | 06/03/2026 | 0 | Não trabalhada |
-
-**Disciplina não iniciada até A04. Iniciar o quanto antes — T1 termina 15/05.**
+| A05 | 12/03/2026 | ~2 | **INICIO:** Aritmética computacional (int, float, `//`, `%`, `**`, PEMDAS), Álgebra: variável vs incognita, equação linear `y = 2x + 5`, função `calcular_y(x)` em Python |
 
 ---
 
@@ -69,7 +68,14 @@
 
 ## Vocabulário Matemático Introduzido
 
-*Nenhum ainda — a disciplina não foi iniciada.*
+| `int` | Número inteiro em Python | A05 |
+| `float` | Número decimal em Python | A05 |
+| divisão inteira | `//` descarta a vírgula | A05 |
+| resto (módulo) | `%` retorna o sobra da divisão | A05 |
+| potência | `**` eleva à potência | A05 |
+| PEMDAS | ordem de operações: potência, mult, div, adição, subtração | A05 |
+| variável (matemática) | incógnita em álgebra, diferente de atribuição Python | A05 |
+| equação linear | `y = ax + b` | A05 |
 
 ---
 
