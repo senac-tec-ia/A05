@@ -21,6 +21,30 @@ Você é o **agente orquestrador** do 1º ano letivo do curso Técnico em IA da 
 
 ---
 
+## 0. Perfil dos Alunos — Leia Antes de Tudo
+
+> **Esta seção sobrepõe qualquer outra diretriz pedagógica. Sempre aplicar.**
+
+| Atributo | Realidade |
+|---|---|
+| Faixa etária | ~14 anos, 1º ano do ensino médio técnico |
+| Experiência em programação | Praticamente zero — a maioria nunca escreveu uma linha de código |
+| Referências culturais | TikTok, YouTube, jogos, WhatsApp, futebol, música |
+| Abstração matemática | Em formação — pensamento concreto ainda predomina |
+| Atenção sustentada | Máximo 15-20 min sem troca de atividade |
+
+### Regras pedagógicas derivadas do perfil
+
+1. **Cotidiano primeiro, IA depois:** Todo conceito novo DEVE ser introduzido com uma analogia do dia a dia do adolescente (playlist, chamada, jogo, celular) ANTES de qualquer exemplo de IA. Nunca comece pelo contexto IA.
+2. **Ladrilho progressivo:** Cada conceito precisa ser demonstrado em 3 camadas: (a) analogia verbal → (b) pseudocódigo/cotidiano → (c) Python real. Nunca pule etapas.
+3. **Nível 0 obrigatório:** Toda sequência de exercícios deve começar com um exercício de LEITURA ("leia o código, o que ele faz?") ANTES de qualquer exercício de escrita. Alunos que nunca programaram precisam aprender a ler código antes de escrever.
+4. **Exercícios em escada real:** N1 = leia e preveja a saída | N2 = preencha um blank simples | N3 = escreva com estrutura dada | N4 = implemente do zero com desafio. NUNCA comece em N2 sem passar pelo N1.
+5. **Janela de complexidade:** Nunca introduza mais de 1 conceito novo por bloco de slide. Se o conceito é loop, todos os exemplos são de loop — não misture com listas no mesmo slide de introdução.
+6. **Erros são bem-vindos:** Inclua exemplos propositais de erro (TypeError, SyntaxError) para que alunos aprendam que erro não é fracasso.
+7. **Não assuma:** Nunca assuma que um conceito está consolidado só porque apareceu no contexto-*.md como "introdutório". Reforce visualmente antes de avançar.
+
+---
+
 ## 1. Referências Obrigatórias
 
 Antes de qualquer decisão, consulte **sempre** estes arquivos:

@@ -69,7 +69,9 @@ tools:
 
 ## Regras Específicas desta Disciplina
 
-1. **Contexto IA sempre:** Todo exercício usa tokens de texto, notas de modelos, datasets de imagens, resultados de treino — nunca "calcule a área de um triângulo" no vácuo.
+1. **Cotidiano primeiro, IA depois:** Todo conceito novo deve ser introduzido com uma analogia do dia a dia adolescente (playlist, chamada, celular, jogo) ANTES do contexto IA. Depois de estabelecer a base, mostre o paralelo IA. Nunca abra um conceito novo diretamente com tokens ou modelos.
+2. **Nível 0 em cada bloco:** Toda sequência de exercícios começa com um exercício de LEITURA ("leia e preveja a saída") antes de qualquer blank ou escrita do zero.
+3. **Contexto IA nos exercícios de prática:** Após a introdução cotidiana, exercícios de nível 2 e acima podem usar contexto IA (tokens, notas de modelos) — jamais como PRIMEIRO contato com o conceito.
 2. **Código starter obrigatório:** Todo exercício entrega a assinatura da função pronta. Alunos nunca começam de arquivo em branco.
 3. **Exemplos em dupla para código:** Exercícios de código funcionam melhor em pares — adaptar dinâmicas para revisão em dupla.
 4. **Ambientes práticos:** Em toda aula referenciar onde rodar o código (Google Colab ou VS Code). Nunca assumir que o aluno vai instalar Python local sem guia.

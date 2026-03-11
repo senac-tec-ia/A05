@@ -33,18 +33,131 @@ bgPreset: palette
 pulse: true
 ---
 
-<!-- SLIDE 2 - Revisão relâmpago -->
-<!-- objetivo: ativar memória de curto prazo sobre variáveis, condicionais e funções antes de avançar para loops -->
+<!-- SLIDE 2 - Revisão relâmpago (sem funções) -->
+<!-- objetivo: ativar memória com perguntas sobre o que foi definitivamente consolidado — sem mencionar def/funções -->
 
 # Revisão Relâmpago
 
 **3 perguntas, 2 minutos — sem pesquisar**
 
-- Qual a diferença entre `int` e `float`?
+- O que aparece na tela quando rodamos `print("Python")`?
+- Qual a diferença entre `x = 5` e `x = "cinco"`?
 - Complete: `if nota >= 7: ____`
-- O que faz `def somar(a, b): return a + b`?
 
 > Já sabemos isso. Hoje vamos além: repetição e coleções.
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 3 - Consolidação: print() e f-string -->
+<!-- objetivo: fixar print() e f-string como ferramenta de saída antes de entrar em loops -->
+
+# `print()` — Fixando a Ferramenta
+
+```python
+# print() mostra qualquer coisa na tela
+print("Olá, turma!")              # texto (str)
+print(14)                          # número inteiro (int)
+print(9.5)                         # decimal (float)
+print(True)                        # verdadeiro/falso (bool)
+
+# variável junto com texto
+nome = "Ana"
+print("Aluno:", nome)              # Aluno: Ana
+
+# f-string: a forma profissional de montar texto
+print(f"Oi, {nome}!")             # Oi, Ana!
+nota = 8.5
+print(f"Nota final: {nota}")      # Nota final: 8.5
+print(f"Aprovado: {nota >= 7}")   # Aprovado: True
+```
+
+<v-click>
+
+**F-string:** coloque `f` antes das aspas e use `{variavel}` para colar o valor dentro do texto.
+
+</v-click>
+
+---
+layout: two-cols-text
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 4 - Tipos de dados: as caixinhas -->
+<!-- objetivo: consolidar os 4 tipos com metáfora visual e armadilhas comuns antes de loops -->
+
+# Os 4 Tipos de Dados Básicos
+
+## As Caixinhas do Python
+
+| Tipo | Guarda | Exemplos |
+|---|---|---|
+| `str` | texto | `"Ana"`, `"Python 3"` |
+| `int` | número inteiro | `14`, `2026`, `100` |
+| `float` | número decimal | `9.5`, `3.14` |
+| `bool` | sim ou não | `True`, `False` |
+
+::right::
+
+## Cuidado com as Armadilhas
+
+```python
+# "3" é str — não é o número 3!
+x = "3"
+y = 3
+
+print(x + x)    # "33" (juntou textos)
+print(y + y)    # 6   (somou números)
+
+# armadilha clássica de iniciante:
+print("3" + 3)  # ERRO: TypeError!
+
+# para ver o tipo de qualquer variável:
+print(type(x))  # <class 'str'>
+print(type(y))  # <class 'int'>
+```
+
+> O Python não mistura caixas. Tente misturar e ele reclama.
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 5 - Aquecimento: identifique o tipo -->
+<!-- objetivo: consolidar tipos com exercício de leitura — prática antes de loops -->
+
+# Aquecimento — Qual o Tipo?
+
+**Individual · 5 minutos · Nível 0 — sem digitar ainda**
+
+Leia cada linha e escreva o tipo no caderno (`str`, `int`, `float`, `bool`):
+
+```python
+a = "machine learning"     # tipo: ___
+b = 14                     # tipo: ___
+c = 98.6                   # tipo: ___
+d = False                  # tipo: ___
+e = "3.14"                 # tipo: ___  ← ATENÇÃO: armadilha!
+f = 3.14                   # tipo: ___  ← igual ao de cima?
+```
+
+<v-click>
+
+Agora rode no Colab e use `type()` para conferir:
+
+```python
+print(type(a))   # <class 'str'>
+```
+
+> `"3.14"` e `3.14` parecem iguais na tela, mas o Python os trata completamente diferente.
+
+</v-click>
 
 ---
 layout: center
@@ -52,7 +165,7 @@ card: true
 bgPreset: palette
 ---
 
-<!-- SLIDE 3 - Divisor Bloco 1 -->
+<!-- SLIDE 6 - Divisor Bloco 1 -->
 
 # Bloco 1
 ## Python: Loops e Listas
@@ -65,110 +178,28 @@ card: true
 bgPreset: default
 ---
 
-<!-- SLIDE 4 - Por que repetir? -->
-<!-- objetivo: criar intuição sobre repetição sequencial como base do processamento em IA -->
+<!-- SLIDE 7 - Você já faz loops todo dia -->
+<!-- objetivo: criar intuição sobre repetição com analogias do cotidiano adolescente ANTES de qualquer código -->
 
-# Por que repetir?
+# Você Já Faz Loops Todo Dia
 
 <v-click>
 
-- Todo modelo de linguagem lê **token por token**
-- Reconhecimento facial analisa **pixel por pixel**
-- Treino de rede neural percorre o dataset **época por época**
+Pense na sua rotina:
+
+- **Spotify:** toca faixa 1, faixa 2, faixa 3... até acabar a playlist
+- **WhatsApp:** você abre cada mensagem não lida, uma por uma
+- **Chamada:** professor fala nome 1, nome 2... até chamar todos
+- **Jogo:** personagem anda, pula, ataca — repete centenas de vezes por segundo
 
 </v-click>
 
 <v-click>
 
-> **Conclusão:** repetição controlada é o coração de todo sistema de IA.
+> **Loop = repetir uma ação para cada item de uma lista** — ou enquanto uma condição for verdadeira.
 
-</v-click>
-
----
-layout: default
-card: true
-bgPreset: default
----
-
-<!-- SLIDE 5 - O loop for -->
-<!-- objetivo: aprender a sintaxe do for com range() e iteração sobre coleção -->
-
-# O loop `for`
-
-```python {1-3|4-6|all}
-# iterar sobre uma lista de tokens
-tokens = ["IA", "é", "incrível"]
-for token in tokens:
-    print(token)   # processa cada item da lista
-
-# iterar com range
-for epoca in range(5):
-    print(f"Época {epoca} rodando...")
-```
-
-<v-click>
-
-- **`for variavel in colecao:`** — sempre com `:` e indentação de 4 espaços
-- `range(n)` gera 0, 1, 2, ..., n-1
-
-</v-click>
-
----
-layout: default
-card: true
-bgPreset: default
----
-
-<!-- SLIDE 6 - EX01 -->
-
-# EX01 - Iterando Tokens
-
-**Em dupla · 8 minutos · Nível 1**
-
-Complete o código para imprimir cada token e contar quantos existem:
-
-```python
-# EX01 - Iterando Tokens
-tokens = ["machine", "learning", "é", "incrível", "mesmo"]
-
-# TAREFA 1: imprimir cada token
-for ___ in ___:
-    print(___)
-
-# TAREFA 2: contar tokens
-contador = 0
-for t in tokens:
-    ___ += 1
-
-print(f"Total de tokens: {contador}")
-```
-
----
-layout: default
-card: true
-bgPreset: default
----
-
-<!-- SLIDE 7 - O loop while -->
-<!-- objetivo: entender loop com condição de parada dinâmica, relevante para critérios de convergência em IA -->
-
-# O loop `while`
-
-```python {1-2|3-6|7|all}
-# continua enquanto a condição for verdadeira
-confianca = 0.5
-
-while confianca < 0.9:
-    confianca += 0.1   # simula melhora a cada iteração
-    print(f"Confiança atual: {confianca:.1f}")
-
-print("Modelo convergiu!")
-```
-
-<v-click>
-
-- **Cuidado:** se a condição nunca for falsa, o loop não termina
-- Use `while` quando **não sabe quantas repetições** serão necessárias
+Sem loop: você escreveria `print("Ana")`, `print("Bruno")`, `print("Carla")`... para cada nome.
+**Com loop: Python faz isso por você, quantas vezes precisar.**
 
 </v-click>
 
@@ -178,34 +209,42 @@ card: true
 bgPreset: default
 ---
 
-<!-- SLIDE 8 - break e continue -->
-<!-- objetivo: controlar o fluxo de um loop para pular ou interromper iterações -->
+<!-- SLIDE 8 - Da vida real para o Python -->
+<!-- objetivo: criar ponte explícita entre a intuição cotidiana e a sintaxe do for antes de ver qualquer código de IA -->
 
-# Controlando o Loop
+# Da Vida Real para o Python
 
-## `break` - encerra tudo
+## Chamada da turma (passo a passo)
 
-```python
-for token in tokens:
-    if token == "STOP":
-        break       # sai do loop
-    print(token)
-```
-
-Usado quando encontrou o que precisava.
+1. Pegar a lista de nomes
+2. **Para cada nome** na lista: falar em voz alta
+3. Repetir até o fim da lista
 
 ::right::
 
-## `continue` - pula este item
+## Em Python
 
 ```python
-for token in tokens:
-    if token == "":
-        continue    # pula vazios
-    print(token)
+turma = ["Ana", "Bruno", "Carla", "Daniel"]
+
+for nome in turma:
+    print(nome, "- Presente!")
+
+# saída:
+# Ana - Presente!
+# Bruno - Presente!
+# Carla - Presente!
+# Daniel - Presente!
 ```
 
-Usado para filtrar itens indesejados.
+**Como ler em voz alta:**
+*"Para cada `nome` dentro de `turma`, execute o bloco abaixo"*
+
+- `for` → começa o loop
+- `nome` → variável temporária (você escolhe o nome!)
+- `in turma` → de onde vêm os itens
+- `:` → **obrigatório**, não esqueça!
+- 4 espaços → tudo dentro do loop fica recuado
 
 ---
 layout: default
@@ -213,59 +252,31 @@ card: true
 bgPreset: default
 ---
 
-<!-- SLIDE 9 - EX02 -->
+<!-- SLIDE 9 - O loop for: sintaxe completa com range() -->
+<!-- objetivo: ver for com range() e iterar sobre coleões diferentes — ainda sem contexto IA -->
 
-# EX02 - Limiar de Confiança
+# O loop `for` — Sintaxe Completa
 
-**Em dupla · 10 minutos · Nível 2**
+```python {1-4|5-8|9-12|all}
+# Exemplo 1: percorrer lista de valores
+notas = [7.5, 8.0, 6.5, 9.0]
+for nota in notas:
+    print(f"Nota: {nota}")
 
-O modelo treina até atingir 85% de acurácia. Complete:
+# Exemplo 2: range() gera sequência de números
+for numero in range(5):         # 0, 1, 2, 3, 4
+    print(f"Número {numero}")
 
-```python
-# EX02 - Limiar de Confiança
-acuracia = 0.50
-tentativa = 0
-
-while ___:            # continue enquanto acurácia < 0.85
-    acuracia += 0.05
-    tentativa += 1
-    print(f"Tentativa {tentativa}: acurácia = {acuracia:.2f}")
-
-    if acuracia >= 1.0:
-        break         # limite de segurança
-
-print(f"Modelo pronto após {tentativa} tentativas!")
-```
-
----
-layout: default
-card: true
-bgPreset: default
----
-
-<!-- SLIDE 10 - Listas em Python -->
-<!-- objetivo: entender listas como estrutura sequencial para armazenar resultados de modelos de IA -->
-
-# Listas em Python
-
-```python {1|2-4|5-7|all}
-# criar lista vazia
-acuracias = []
-
-# adicionar itens com append
-acuracias.append(0.62)
-acuracias.append(0.75)
-acuracias.append(0.83)
-
-# acessar por índice (começa em 0)
-print(acuracias[0])    # 0.62 - primeira época
-print(acuracias[-1])   # 0.83 - última época
-print(len(acuracias))  # 3 - total de épocas
+# Exemplo 3: range com início e fim
+for numero in range(1, 6):      # 1, 2, 3, 4, 5
+    print(f"Questão {numero}")
 ```
 
 <v-click>
 
-> Pense na lista como o **histórico de treino** de um modelo: cada índice é uma época.
+- `range(5)` → gera 0, 1, 2, 3, 4  *(termina **antes** do 5)*
+- `range(1, 6)` → gera 1, 2, 3, 4, 5  *(termina **antes** do 6)*
+- Indentação de 4 espaços define o que está **dentro** do loop
 
 </v-click>
 
@@ -275,27 +286,305 @@ card: true
 bgPreset: default
 ---
 
-<!-- SLIDE 11 - EX03 -->
+<!-- SLIDE 10 - EX00: leia e preveja — nível 0 -->
+<!-- objetivo: ensinar a ler código antes de escrever — habilidade essencial para quem nunca programou -->
 
-# EX03 - Histórico de Acurácias
+# EX00 - Leia e Preveja
+
+**Individual · 5 minutos · Nível 0 — sem digitar nada ainda**
+
+O que este código vai imprimir? Escreva no **caderno** antes de rodar:
+
+```python
+frutas = ["maçã", "banana", "uva", "morango"]
+
+for fruta in frutas:
+    print("Fruta:", fruta)
+
+print(f"Total: {len(frutas)} frutas")
+```
+
+No caderno:
+1. Quantas linhas esse código imprime no total?
+2. Qual é a terceira linha impressa?
+3. O que `len(frutas)` retorna?
+
+<v-click>
+
+> Depois: rode no Colab e compare com o que escreveu no caderno.
+> **Ler código antes de rodar é uma habilidade profissional essencial.**
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 11 - EX01: complete a chamada (contexto cotidiano) -->
+<!-- objetivo: primeiro exercício de escrita — preencher lacunas em contexto completamente familiar -->
+
+# EX01 - Complete a Chamada
+
+**Em dupla · 8 minutos · Nível 1**
+
+Complete os `___`. A lógica já está escrita pra vocês:
+
+```python
+# EX01 - Chamada digital da turma
+turma = ["Alice", "Bruno", "Carla", "Daniel", "Eduarda"]
+
+# TAREFA 1: imprima cada nome com "Presente!" na frente
+for ___ in turma:
+    print(___, "- Presente!")
+
+# TAREFA 2: conte quantos alunos há na turma
+total = ___(turma)         # dica: use len()
+print(f"Total de alunos: {total}")
+
+# TAREFA 3: imprima os números de 1 a 5 usando range
+for numero in range(___):  # dica: range(1, 6) vai de 1 até 5
+    print(numero)
+```
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 12 - Bridge: cotidiano para IA (tokens) -->
+<!-- objetivo: mostrar que a lógica que usaram para nomes é exatamente o que a IA usa com tokens -->
+
+# Da Turma para a IA: É o Mesmo `for`
+
+O loop que você usou na chamada é **exatamente igual** ao que uma IA usa para processar texto:
+
+```python
+# Contexto cotidiano — você já fez isso:
+turma = ["Alice", "Bruno", "Carla"]
+for aluno in turma:
+    print(aluno)
+
+# Contexto IA — mesma sintaxe, outro contexto:
+tokens = ["machine", "learning", "é", "incrível"]
+for token in tokens:
+    print(token)   # IA processa palavra por palavra
+```
+
+<v-click>
+
+**Token** = menor unidade de texto que um modelo de linguagem processa.
+Quando você digita no ChatGPT, ele quebra seu texto em tokens e percorre cada um com um loop assim.
+
+> A sintaxe é idêntica. O que muda é o **significado** da lista.
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 13 - O loop while: analogia do alarme primeiro -->
+<!-- objetivo: criar intuição para while com condição de parada usando analogia do cotidiano antes do código -->
+
+# O loop `while` — Enquanto...
+
+<v-click>
+
+**Analogia do alarme:**
+O despertador toca, você aperta soneca. E repete... **enquanto** não for hora de levantar.
+
+```
+enquanto (hora_atual < hora_de_acordar):
+    tocar alarme
+    apertar soneca
+```
+
+</v-click>
+
+<v-click>
+
+**Em Python:**
+
+```python
+hora_atual = 6
+hora_de_acordar = 7
+
+while hora_atual < hora_de_acordar:
+    print(f"⏰ São {hora_atual}h — mais 5 minutinhos...")
+    hora_atual += 1    # avança 1 hora
+
+print("Hora de levantar!")
+```
+
+- `while condição:` → **enquanto** a condição for `True`, repete
+- A cada repetição, algo deve **mudar** — senão o loop nunca para!
+
+</v-click>
+
+---
+layout: two-cols-text
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 14 - break e continue: analogia da playlist -->
+<!-- objetivo: tornar break/continue concretos com analogia de playlist do Spotify antes de ver código -->
+
+# Controlando o Loop: `break` e `continue`
+
+## `break` — para tudo
+
+Como **fechar o Spotify** quando aparece anúncio:
+
+```python
+playlist = ["Música 1", "Música 2",
+            "ANUNCIO", "Música 3"]
+
+for musica in playlist:
+    if musica == "ANUNCIO":
+        break        # sai do loop
+    print(f"Tocando: {musica}")
+```
+
+Sai do loop assim que encontra o anúncio.
+
+::right::
+
+## `continue` — pula este item
+
+Como **apertar próxima** na faixa que você odeia:
+
+```python
+playlist = ["Música 1", "Música 2",
+            "Aquela que odeio", "Música 3"]
+
+for musica in playlist:
+    if musica == "Aquela que odeio":
+        continue     # pula esta, vai à próxima
+    print(f"Tocando: {musica}")
+```
+
+Não ouve aquela faixa, mas a playlist continua.
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 15 - EX02: while em contexto cotidiano -->
+<!-- objetivo: praticar while com contexto acessível (contagem regressiva) antes de ir para contexto IA -->
+
+# EX02 - Contagem Regressiva
+
+**Em dupla · 8 minutos · Nível 1**
+
+Complete a contagem regressiva do foguete:
+
+```python
+# EX02 - Contagem Regressiva
+contagem = 10
+
+while ___:                   # enquanto contagem > 0
+    print(f"{contagem}...")
+    ___ -= 1                 # diminui 1 na contagem
+
+print("🚀 Lançamento!")
+
+# BÔNUS: pule o número 7 na contagem
+# dica: if + continue dentro do while
+```
+
+Resultado esperado:
+```
+10...
+9...
+8...
+...
+1...
+🚀 Lançamento!
+```
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 16 - Listas em Python: analogia do carrinho -->
+<!-- objetivo: introduzir listas com metáfora cotidiana (carrinho de mercado) antes de índices e append -->
+
+# Listas em Python
+
+<v-click>
+
+**Analogia:** Lista = carrinho de mercado.
+Você pode adicionar itens, ver o que tem, pegar pelo número da posição.
+
+</v-click>
+
+<v-click>
+
+```python {1-2|3-6|7-10|all}
+# criar lista vazia (carrinho vazio)
+notas = []
+
+# adicionar itens com append (colocar no carrinho)
+notas.append(7.5)
+notas.append(8.0)
+notas.append(6.5)
+
+# acessar por índice — começa em 0!
+print(notas[0])    # 7.5  (primeiro item)
+print(notas[-1])   # 6.5  (último item — de trás)
+print(len(notas))  # 3    (quantos itens tem)
+```
+
+</v-click>
+
+<v-click>
+
+> `max(notas)` → maior · `min(notas)` → menor · `sum(notas)` → soma total
+> **Atenção:** índice começa em 0. Primeiro item = `lista[0]`, não `lista[1]`.
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 17 - EX03: boletim da turma (contexto cotidiano) -->
+<!-- objetivo: praticar append + for em contexto cotidiano de notas antes de ir para contexto IA -->
+
+# EX03 - Boletim da Turma
 
 **Individual · 8 minutos · Nível 2**
 
-Construa o histórico de treino ao longo de 5 épocas:
+Construa o boletim ao longo de 5 provas:
 
 ```python
-# EX03 - Histórico de Acurácias
-acuracias = []
-acuracia_inicial = 0.50
+# EX03 - Boletim da Turma
+notas_turma = []
+nota_base = 5.0
 
-for epoca in range(5):
-    acuracia = acuracia_inicial + ___ * 0.08   # cresce 8% por época
-    acuracias.___(___)                          # adiciona à lista
+for prova in range(5):
+    nota = nota_base + ___ * 0.8    # melhora 0.8 a cada prova
+    notas_turma.___(___)             # adiciona à lista
 
-print("Histórico completo:", acuracias)
-print("Melhor acurácia:", max(acuracias))
-print("Pior acurácia:", min(acuracias))
+print("Notas:", notas_turma)
+print("Melhor nota:", max(notas_turma))
+print("Pior nota:", min(notas_turma))
+print("Quantidade:", len(notas_turma))
 ```
+
+> `prova` vale 0, 1, 2, 3, 4 a cada rodada. Como usar isso na conta?
 
 ---
 layout: brainstorm
@@ -304,30 +593,32 @@ bgPreset: palette
 pulse: true
 ---
 
-<!-- SLIDE 12 - DINAMICA: Purificador de Dataset -->
+<!-- SLIDE 18 - DINAMICA: Purificador de Lista -->
+<!-- objetivo: dinâmica em dupla combinando for + if + listas para resolver problema concreto de filtragem -->
 
-# Dinâmica em Dupla: Purificador de Dataset
+# Dinâmica em Dupla: Purificador de Lista
 
 **15 minutos · Desafio colaborativo**
 
-O dataset chegou com sujeira. Seu loop deve filtrar só os tokens válidos:
+A lista de notas chegou com problemas — tem `None`, strings vazias e valores absurdos. Filtre só as notas válidas:
 
 ```python
-# dataset com problemas
-dataset = ["gato", None, "cachorro", "", 42, "pássaro", None, "peixe"]
+# Lista com sujeira
+registros = [8.5, None, 7.0, "", 42, 6.5, None, 9.0]
 
-tokens_validos = []
+notas_validas = []
 
-for item in dataset:
-    # ESCREVA A CONDIÇÃO: apenas strings não vazias
+for item in registros:
+    # ESCREVA A CONDIÇÃO: apenas float entre 0 e 10
     if ___:
-        tokens_validos.append(item)
+        notas_validas.append(item)
 
-print(f"Válidos: {tokens_validos}")
-print(f"Removidos: {len(dataset) - len(tokens_validos)}")
+print(f"Válidas: {notas_validas}")
+print(f"Removidos: {len(registros) - len(notas_validas)}")
+print(f"Média: {sum(notas_validas) / len(notas_validas):.1f}")
 ```
 
-> Dica: `type(item) == str` e `item != ""`
+> Dica: `type(item) == float` verifica o tipo. E o limite 0 a 10?
 
 ---
 layout: center
@@ -335,20 +626,27 @@ card: true
 bgPreset: animate
 ---
 
-<!-- SLIDE 13 - Sintese Bloco 1 e gancho -->
+<!-- SLIDE 19 - Síntese Bloco 1 e gancho -->
 
 # Loops e Listas: o que fizemos
 
 <v-click>
 
-`for` percorre coleções · `while` repete com condição · listas guardam o histórico
+`for` percorre coleções · `while` repete com condição · `break/continue` controlam o fluxo · listas guardam sequências
+
+</v-click>
+
+<v-click>
+
+> O mesmo loop que percorreu nomes de alunos é o que percorre **tokens numa IA**.
+> O mesmo `append` que montou o boletim é o que guarda o **histórico de treino** de um modelo.
 
 </v-click>
 
 <v-click>
 
 > Em matemática, o loop `for` sobre uma lista é o equivalente visual de uma **somatória**.
-> No próximo bloco, vamos colocar nome nos números que estamos calculando.
+> No próximo bloco, vamos dar nome matemático às operações que já fizemos em Python.
 
 </v-click>
 
