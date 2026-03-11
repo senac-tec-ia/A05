@@ -1,6 +1,6 @@
-# Contexto — Estatística Aplicada e Lógica Matemática em IA (D09-UC07)
+# Contexto — Estatística Aplicada e Lógica Matemática em IA (UC09)
 
-**Código:** D09-UC07  
+**Código:** UC09  
 **UC:** UC07 — Utilização da Estatística Aplicada e Lógica Matemática em IA  
 **Disciplina:** Estatística Aplicada e Lógica Matemática  
 **Carga Total:** 33h (40 HA) | `T1: 13 HA (ajustado: 11) · T2: 14 HA · T3: 13 HA`
@@ -49,9 +49,9 @@
 ## Pré-requisitos dos Alunos
 
 Conceitos que os alunos já têm (relevantes para esta disciplina):
-- **Operadores aritméticos Python:** `+, -, *, /, //, **` — vistos em D05-UC03 A04
-- **Funções `def/return`:** Vistos em D05-UC03 A04 — conectar `f(x)` matemático com `def f(x):`
-- **D03-UC01:** Verificar antes de cada aula o que foi coberto lá — não repetir
+- **Operadores aritméticos Python:** `+, -, *, /, //, **` — vistos em UC05 A04
+- **Funções `def/return`:** Vistos em UC05 A04 — conectar `f(x)` matemático com `def f(x):`
+- **UC03:** Verificar antes de cada aula o que foi coberto lá — não repetir
 
 ---
 
@@ -93,7 +93,7 @@ Conceitos que os alunos já têm (relevantes para esta disciplina):
 
 ## Regras para o Copilot
 
-1. **Coordenar com D03-UC01:** Verificar `contexto-fundamentos-matematicos.md` antes de gerar — nunca repetir o que foi coberto lá
+1. **Coordenar com UC03:** Verificar `contexto-fundamentos-matematicos.md` antes de gerar — nunca repetir o que foi coberto lá
 2. **Gráfico real de IA em toda aula:** Não introduzir função matemática sem mostrar onde ela aparece em treino de modelos
 3. **Python para plotar:** `import matplotlib.pyplot as plt; import numpy as np` — todo exercício deve ter versão em código
 4. **1 HA = 1 conceito + 1 exercício:** Disciplina enxuta — alta densidade de prática por HA

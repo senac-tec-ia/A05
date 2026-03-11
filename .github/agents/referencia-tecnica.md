@@ -494,7 +494,7 @@ Context files live in `.github/agents/contexto-[slug-da-disciplina].md`. They ar
 
 | Conceito | Disciplina Relacionada | Observação |
 |---|---|---|
-| GPU e paralelismo | D06-UC04 | Introduzir na Aula 04 |
+| GPU e paralelismo | UC06 | Introduzir na Aula 04 |
 ```
 
 ### Rules

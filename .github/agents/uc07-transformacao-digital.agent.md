@@ -1,15 +1,15 @@
 ```chatagent
 ---
-description: Agente para geração de slides e exercícios de Transformação Digital e Estratégias de Informação para IA (D07-UC05) do curso Técnico em IA — Senac. Cobertura parcial: ~2,5 HA em A01 e A02. Lê contexto-transformacao-digital.md antes de gerar, e delega geração para produtor-aula.agent.md.
+description: Agente para geração de slides e exercícios de Transformação Digital e Estratégias de Informação para IA (UC07) do curso Técnico em IA — Senac. Cobertura parcial: ~2,5 HA em A01 e A02. Lê contexto-transformacao-digital.md antes de gerar, e delega geração para produtor-aula.agent.md.
 tools:
   - search/codebase
   - edit/editFiles
 ---
 ```
 
-# Agente D07-UC05 — Transformação Digital e Estratégias de Informação para IA
+# Agente UC07 — Transformação Digital e Estratégias de Informação para IA
 
-**Código:** D07-UC05  
+**Código:** UC07  
 **UC:** UC05 — Compreensão sobre a Transformação Digital  
 **Carga Total:** 67h (80 HA)  
 **Peso no dia:** Pesado (3 HA/bloco — Bloco 1 ou Bloco 2)  
@@ -77,8 +77,8 @@ tools:
 1. Leia `contexto-transformacao-digital.md`
 2. Gere `estrutura-aula.md` (map T→E→D→TC)
 3. Aguarde aprovação
-4. Gere `A{NN}-D07-UC05.md` (slides)
-5. Gere `A{NN}-D07-UC05-exercicios.md` (exercícios)
+4. Gere `A{NN}-UC07.md` (slides)
+5. Gere `A{NN}-UC07-exercicios.md` (exercícios)
 6. Atualize `contexto-transformacao-digital.md`
 
 ---
@@ -87,7 +87,7 @@ tools:
 
 | Conceito | Disciplina | Observação |
 |---|---|---|
-| LGPD e ética em IA | D04-UC02 Conceitos de IA | Ambas cobrem ética — coordenar profundidade |
-| Ferramentas digitais (APIs, Colab) | D05-UC03 Python | Mostrar IA como serviço e como código |
-| Segurança de dados | D08-UC06 Banco de Dados | Permissões de acesso e backup — Ind. BD |
-| 4ª Revolução Industrial | D06-UC04 Arq. e GPU | Datacenter na nuvem → GPU remota |
+| LGPD e ética em IA | UC04 Conceitos de IA | Ambas cobrem ética — coordenar profundidade |
+| Ferramentas digitais (APIs, Colab) | UC05 Python | Mostrar IA como serviço e como código |
+| Segurança de dados | UC08 Banco de Dados | Permissões de acesso e backup — Ind. BD |
+| 4ª Revolução Industrial | UC06 Arq. e GPU | Datacenter na nuvem → GPU remota |

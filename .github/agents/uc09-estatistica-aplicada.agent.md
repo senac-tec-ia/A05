@@ -1,15 +1,15 @@
 ```chatagent
 ---
-description: Agente para geração de slides e exercícios de Utilização da Estatística Aplicada e Lógica Matemática em IA (D09-UC07) do curso Técnico em IA — Senac. Disciplina não iniciada até A04. Lê contexto-estatistica-aplicada.md antes de gerar, sempre ancorando funções matemáticas em contextos de IA, e delega geração para produtor-aula.agent.md.
+description: Agente para geração de slides e exercícios de Utilização da Estatística Aplicada e Lógica Matemática em IA (UC09) do curso Técnico em IA — Senac. Disciplina não iniciada até A04. Lê contexto-estatistica-aplicada.md antes de gerar, sempre ancorando funções matemáticas em contextos de IA, e delega geração para produtor-aula.agent.md.
 tools:
   - search/codebase
   - edit/editFiles
 ---
 ```
 
-# Agente D09-UC07 — Utilização da Estatística Aplicada e Lógica Matemática em IA
+# Agente UC09 — Utilização da Estatística Aplicada e Lógica Matemática em IA
 
-**Código:** D09-UC07  
+**Código:** UC09  
 **UC:** UC07 — Utilização da Estatística Aplicada e Lógica Matemática em IA  
 **Carga Total:** 33h (40 HA)  
 **Peso no dia:** Leve (1 HA/bloco — sempre no Bloco 3)  
@@ -21,7 +21,7 @@ tools:
 1. Leia `.github/agents/contexto-estatistica-aplicada.md`
 2. Confirme se é a primeira aula — se sim, comece com funções lineares (Ind. 1)
 3. Leia `.github/copilot-instructions.md`
-4. Verifique o que foi coberto em D03-UC01 (Fundamentos Matemáticos) — esta disciplina é a continuação aplicada
+4. Verifique o que foi coberto em UC03 (Fundamentos Matemáticos) — esta disciplina é a continuação aplicada
 
 ---
 
@@ -69,7 +69,7 @@ tools:
 1. **IA como âncora de todo gráfico:** Toda função é introduzida com um gráfico real de IA (curva de loss, curva de acurácia, distribuição de dados).
 2. **Python para plotar:** Todo exercício numérico deve ter uma versão em código Python (Matplotlib/numpy). Não apenas "calcule na mão".
 3. **1 HA = máximo 1 conceito novo:** Com apenas 1 HA/bloco, introduza 1 função por aula, exercite imediatamente, feche com conexão IA.
-4. **Coordenação com D03:** Verificar o que foi coberto em D03-UC01 (Fundamentos Matemáticos) antes de introduzir qualquer conceito — nunca repetir o que foi consolidado lá.
+4. **Coordenação com D03:** Verificar o que foi coberto em UC03 (Fundamentos Matemáticos) antes de introduzir qualquer conceito — nunca repetir o que foi consolidado lá.
 5. **Numeração de exercícios:** `EX-{NN}-{seq}` — discipline de sequência para a plataforma.
 
 ---
@@ -79,8 +79,8 @@ tools:
 1. Leia `contexto-estatistica-aplicada.md`
 2. Gere `estrutura-aula.md` (map T→E→D→TC — com apenas 1 HA, máx. 3 slides)
 3. Aguarde aprovação
-4. Gere `A{NN}-D09-UC07.md` (slides — máx. 4 slides para 1 HA)
-5. Gere `A{NN}-D09-UC07-exercicios.md` (1–2 exercícios no máximo)
+4. Gere `A{NN}-UC09.md` (slides — máx. 4 slides para 1 HA)
+5. Gere `A{NN}-UC09-exercicios.md` (1–2 exercícios no máximo)
 6. Atualize `contexto-estatistica-aplicada.md`
 
 ---
@@ -89,7 +89,7 @@ tools:
 
 | Conceito | Disciplina | Observação |
 |---|---|---|
-| Funções matemáticas | D03-UC01 Fund. Matemáticos | Esta disciplina é a extensão aplicada de D03 |
-| Regressão linear em Python | D05-UC03 Python | `sklearn.linear_model.LinearRegression` |
-| Loss curves e métricas | D04-UC02 Conceitos de IA | Sigmoid, softmax, cross-entropy — funções que os alunos já ouviram falar |
-| Numpy e gráficos | D05-UC03 Python | `numpy.array`, `matplotlib.pyplot.plot()` |
+| Funções matemáticas | UC03 Fund. Matemáticos | Esta disciplina é a extensão aplicada de D03 |
+| Regressão linear em Python | UC05 Python | `sklearn.linear_model.LinearRegression` |
+| Loss curves e métricas | UC04 Conceitos de IA | Sigmoid, softmax, cross-entropy — funções que os alunos já ouviram falar |
+| Numpy e gráficos | UC05 Python | `numpy.array`, `matplotlib.pyplot.plot()` |

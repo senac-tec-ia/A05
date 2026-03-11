@@ -1,6 +1,6 @@
 # Exercícios — Aula 05: Python Loops e Listas, Matemática, Estatística
 
-**Data:** 12/03/2026 | **Disciplinas:** D05-UC03, D03-UC01, D09-UC07
+**Data:** 12/03/2026 | **Disciplinas:** UC05, UC03, UC09
 
 ---
 
@@ -22,7 +22,7 @@ testes:
 
 ## EX00 - Leia e Preveja
 
-**Disciplina:** D05-UC03 Python | **Nível 0:** leitura e previsão | **Individual**
+**Disciplina:** UC05 Python | **Nível 0:** leitura e previsão | **Individual**
 
 Leia o código abaixo e escreva no caderno o que cada linha vai imprimir na tela. Só rode no Colab depois de terminar.
 
@@ -66,7 +66,7 @@ testes:
 
 ## EX01 - Complete a Chamada
 
-**Disciplina:** D05-UC03 Python | **Nível 1:** preencher lacunas | **Dupla**
+**Disciplina:** UC05 Python | **Nível 1:** preencher lacunas | **Dupla**
 
 Complete os `___`. A estrutura já está pronta — vocês só preenchem os espaços:
 
@@ -110,7 +110,7 @@ testes:
 
 ## EX02 - Contagem Regressiva
 
-**Disciplina:** D05-UC03 Python | **Nível 1:** preencher lacunas | **Dupla**
+**Disciplina:** UC05 Python | **Nível 1:** preencher lacunas | **Dupla**
 
 Complete a contagem regressiva do foguete. Apenas dois `___` para preencher:
 
@@ -151,7 +151,7 @@ testes:
 
 ## EX03 - Boletim da Turma
 
-**Disciplina:** D05-UC03 Python | **Nível 2:** aplicação guiada | **Individual**
+**Disciplina:** UC05 Python | **Nível 2:** aplicação guiada | **Individual**
 
 Construa o boletim ao longo de 5 provas. Use `append` para montar a lista:
 
@@ -195,7 +195,7 @@ testes:
 
 ## EX04 - Ordem das Operações
 
-**Disciplina:** D03-UC01 Matemática | **Nível 1:** calcular na mão e verificar | **Individual**
+**Disciplina:** UC03 Matemática | **Nível 1:** calcular na mão e verificar | **Individual**
 
 Calcule cada linha **no caderno** antes de rodar no Colab. Escreva o resultado que você acha que vai sair:
 
@@ -236,7 +236,7 @@ testes:
 
 ## EX05 - Tabela da Equação Linear
 
-**Disciplina:** D03-UC01 Matemática | **Nível 2:** aplicação guiada | **Dupla**
+**Disciplina:** UC03 Matemática | **Nível 2:** aplicação guiada | **Dupla**
 
 Gere a tabela de valores para `y = 2x + 5`. A função já está criada — complete só o `return`:
 
@@ -279,7 +279,7 @@ testes:
 
 ## EX06 - Tabela da Função Linear
 
-**Disciplina:** D09-UC07 Estatística | **Nível 1:** completar a função | **Individual**
+**Disciplina:** UC09 Estatística | **Nível 1:** completar a função | **Individual**
 
 Calcule os valores para `f(x) = 3x - 1`. Complete só o `return` da função:
 
@@ -326,7 +326,7 @@ testes:
 
 ## EX01 - Iterando Tokens
 
-**Disciplina:** D05-UC03 Python | **Nível 1:** compreensão | **Dupla**
+**Disciplina:** UC05 Python | **Nível 1:** compreensão | **Dupla**
 
 Complete o código para imprimir cada token da lista e contar quantos existem:
 
@@ -369,7 +369,7 @@ testes:
 
 ## EX02 - Limiar de Confiança
 
-**Disciplina:** D05-UC03 Python | **Nível 2:** aplicação guiada | **Dupla**
+**Disciplina:** UC05 Python | **Nível 2:** aplicação guiada | **Dupla**
 
 O modelo treina até atingir 85% de acurácia. Complete o loop `while` com a condição correta:
 
@@ -412,7 +412,7 @@ testes:
 
 ## EX03 - Histórico de Acurácias
 
-**Disciplina:** D05-UC03 Python | **Nível 2:** aplicação guiada | **Individual**
+**Disciplina:** UC05 Python | **Nível 2:** aplicação guiada | **Individual**
 
 Construa o histórico de treino de um modelo ao longo de 5 épocas:
 
@@ -453,7 +453,7 @@ testes:
 
 ## EX04 - Ordem das Operações
 
-**Disciplina:** D03-UC01 Matemática | **Nível 1:** compreensão | **Individual**
+**Disciplina:** UC03 Matemática | **Nível 1:** compreensão | **Individual**
 
 Calcule cada linha **na mão** antes de rodar no Colab e explique o resultado em comentário:
 
@@ -494,7 +494,7 @@ testes:
 
 ## EX05 - Tabela da Equação Linear
 
-**Disciplina:** D03-UC01 Matemática | **Nível 2:** aplicação guiada | **Dupla**
+**Disciplina:** UC03 Matemática | **Nível 2:** aplicação guiada | **Dupla**
 
 Gere a tabela de valores para `y = 2x + 5`:
 
@@ -535,7 +535,7 @@ testes:
 
 ## EX06 - Tabela da Função Linear
 
-**Disciplina:** D09-UC07 Estatística | **Nível 1:** compreensão | **Individual**
+**Disciplina:** UC09 Estatística | **Nível 1:** compreensão | **Individual**
 
 Calcule os valores para `f(x) = 3x - 1`:
 

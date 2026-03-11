@@ -1,6 +1,6 @@
-# Contexto — Desenvolvimento de Linguagem Python (D05-UC03)
+# Contexto — Desenvolvimento de Linguagem Python (UC05)
 
-**Código:** D05-UC03  
+**Código:** UC05  
 **UC:** UC03 — Desenvolvimento de Linguagem Python  
 **Disciplina:** Python para IA  
 **Carga Total:** 67h (80 HA) | `T1: 26 HA (ajustado: 20) · T2: 27 HA · T3: 27 HA`  

@@ -17,15 +17,15 @@ This repository is a **Slidev lesson deck** for the *Técnico em Inteligência A
 | Revisar/refinar slides gerados (modo plan, slide a slide) | `@editor-slides --mode=review` |
 | Editar slides por instrução explcícita | `@editor-slides --mode=edit` |
 | Audit slide order, tags, UC labels | `@auditor-estrutura` |
-| D01-UC01 Fundamentos de Computação | `@d01-uc01-fundamentos-computacao` |
-| D02-UC01 Inglês Instrumental | `@d02-uc01-ingles-instrumental` |
-| D03-UC01 Fundamentos Matemáticos | `@d03-uc01-fundamentos-matematicos` |
-| D04-UC02 Fundamentos e Conceitos de IA | `@d04-uc02-fundamentos-e-conceitos-de-ia` |
-| D05-UC03 Python para IA | `@d05-uc03-python-para-ia` |
-| D06-UC04 Arquitetura de Computadores e GPU | `@d06-uc04-arquitetura-computadores-gpu` |
-| D07-UC05 Transformação Digital | `@d07-uc05-transformacao-digital` |
-| D08-UC06 Banco de Dados | `@d08-uc06-banco-de-dados` |
-| D09-UC07 Estatística Aplicada | `@d09-uc07-estatistica-aplicada` |
+| UC01 Fundamentos de Computação | `@uc01-fundamentos-computacao` |
+| UC02 Inglês Instrumental | `@uc02-ingles-instrumental` |
+| UC03 Fundamentos Matemáticos | `@uc03-fundamentos-matematicos` |
+| UC04 Fundamentos e Conceitos de IA | `@uc04-fundamentos-e-conceitos-de-ia` |
+| UC05 Python para IA | `@uc05-python-para-ia` |
+| UC06 Arquitetura de Computadores e GPU | `@uc06-arquitetura-computadores-gpu` |
+| UC07 Transformação Digital | `@uc07-transformacao-digital` |
+| UC08 Banco de Dados | `@uc08-banco-de-dados` |
+| UC09 Estatística Aplicada | `@uc09-estatistica-aplicada` |
 
 **Regra de separação:** `@autor-slides` NUNCA toca `exercicios.md`. `@autor-exercicios` NUNCA toca `slides.md`. `@editor-slides` NUNCA age por regras automáticas (isso é papél do `@auditor-estrutura`). Sempre seguir o Handoff Card como contrato entre as camadas.
 
@@ -64,15 +64,15 @@ Before generating any lesson content, read the UC context file(s) for the discip
 
 | Código | Disciplina | Context file |
 |---|---|---|
-| D01-UC01 | Fundamentos de Computação | `.github/agents/contexto-fundamentos-de-computacao.md` |
-| D02-UC01 | Inglês Instrumental | `.github/agents/contexto-ingles-instrumental.md` |
-| D03-UC01 | Fundamentos Matemáticos | `.github/agents/contexto-fundamentos-matematicos.md` |
-| D04-UC02 | Fundamentos e Conceitos de IA | `.github/agents/contexto-fundamentos-e-conceitos-de-ia.md` |
-| D05-UC03 | Python para IA | `.github/agents/contexto-python-para-ia.md` |
-| D06-UC04 | Arquitetura de Computadores e GPU | `.github/agents/contexto-arquitetura-computadores-gpu.md` |
-| D07-UC05 | Transformação Digital | `.github/agents/contexto-transformacao-digital.md` |
-| D08-UC06 | Banco de Dados | `.github/agents/contexto-banco-de-dados.md` |
-| D09-UC07 | Estatística Aplicada | `.github/agents/contexto-estatistica-aplicada.md` |
+| UC01 | Fundamentos de Computação | `.github/agents/contexto-fundamentos-de-computacao.md` |
+| UC02 | Inglês Instrumental | `.github/agents/contexto-ingles-instrumental.md` |
+| UC03 | Fundamentos Matemáticos | `.github/agents/contexto-fundamentos-matematicos.md` |
+| UC04 | Fundamentos e Conceitos de IA | `.github/agents/contexto-fundamentos-e-conceitos-de-ia.md` |
+| UC05 | Python para IA | `.github/agents/contexto-python-para-ia.md` |
+| UC06 | Arquitetura de Computadores e GPU | `.github/agents/contexto-arquitetura-computadores-gpu.md` |
+| UC07 | Transformação Digital | `.github/agents/contexto-transformacao-digital.md` |
+| UC08 | Banco de Dados | `.github/agents/contexto-banco-de-dados.md` |
+| UC09 | Estatística Aplicada | `.github/agents/contexto-estatistica-aplicada.md` |
 
 If a context file does not yet exist for a UC, create it using the standard format defined in `.github/agents/referencia-tecnica.md § 9`.
 

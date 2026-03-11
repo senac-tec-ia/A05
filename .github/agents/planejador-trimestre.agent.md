@@ -58,15 +58,15 @@ Antes de qualquer decisão, consulte **sempre** estes arquivos:
 
 | Código | Disciplina | Peso | HA/bloco | Agente |
 |---|---|---|---|---|
-| D01-UC01 | Fundamentos de Computação | Médio | 2 | `d01-uc01-fundamentos-computacao.agent.md` |
-| D02-UC01 | Inglês Instrumental | Leve | 1 | `d02-uc01-ingles-instrumental.agent.md` |
-| D03-UC01 | Fundamentos Matemáticos | Leve | 1–2 | `d03-uc01-fundamentos-matematicos.agent.md` |
-| D04-UC02 | Fundamentos e Conceitos de IA | Médio | 2 | `d04-uc02-fundamentos-e-conceitos-de-ia.agent.md` |
-| D05-UC03 | Python | Pesado | 3 | `d05-uc03-python-para-ia.agent.md` |
-| D06-UC04 | Arquitetura e GPU | Médio | 2 | `d06-uc04-arquitetura-computadores-gpu.agent.md` |
-| D07-UC05 | Transformação Digital | Pesado | 3 | `d07-uc05-transformacao-digital.agent.md` |
-| D08-UC06 | Banco de Dados | Pesado | 3 | `d08-uc06-banco-de-dados.agent.md` |
-| D09-UC07 | Estatística Aplicada | Leve | 1 | `d09-uc07-estatistica-aplicada.agent.md` |
+| UC01 | Fundamentos de Computação | Médio | 2 | `uc01-fundamentos-computacao.agent.md` |
+| UC02 | Inglês Instrumental | Leve | 1 | `uc02-ingles-instrumental.agent.md` |
+| UC03 | Fundamentos Matemáticos | Leve | 1–2 | `uc03-fundamentos-matematicos.agent.md` |
+| UC04 | Fundamentos e Conceitos de IA | Médio | 2 | `uc04-fundamentos-e-conceitos-de-ia.agent.md` |
+| UC05 | Python | Pesado | 3 | `uc05-python-para-ia.agent.md` |
+| UC06 | Arquitetura e GPU | Médio | 2 | `uc06-arquitetura-computadores-gpu.agent.md` |
+| UC07 | Transformação Digital | Pesado | 3 | `uc07-transformacao-digital.agent.md` |
+| UC08 | Banco de Dados | Pesado | 3 | `uc08-banco-de-dados.agent.md` |
+| UC09 | Estatística Aplicada | Leve | 1 | `uc09-estatistica-aplicada.agent.md` |
 
 ---
 
@@ -115,15 +115,15 @@ Antes de qualquer decisão, consulte **sempre** estes arquivos:
 
 | Código | HA real T1 | Gasto A01–A04 | Restante | Urgência |
 |---|---|---|---|---|
-| D01-UC01 | 13 | 8 | **5** | 🟡 Atenção |
-| D02-UC01 | 13 | 4,5 | **8,5** | 🟢 OK |
-| D03-UC01 | 13 | 0 | **13** | 🔴 Iniciar urgente |
-| D04-UC02 | 11 | 6 | **5** | 🟡 Atenção |
-| D05-UC03 | 20 | 2,5 | **17,5** | 🟢 OK |
-| D06-UC04 | 11 | 1 | **10** | 🟡 Atenção |
-| D07-UC05 | 20 | 2,5 | **17,5** | 🟢 OK |
-| D08-UC06 | 20 | 0 | **20** | 🔴 Iniciar urgente |
-| D09-UC07 | 11 | 0 | **11** | 🔴 Iniciar urgente |
+| UC01 | 13 | 8 | **5** | 🟡 Atenção |
+| UC02 | 13 | 4,5 | **8,5** | 🟢 OK |
+| UC03 | 13 | 0 | **13** | 🔴 Iniciar urgente |
+| UC04 | 11 | 6 | **5** | 🟡 Atenção |
+| UC05 | 20 | 2,5 | **17,5** | 🟢 OK |
+| UC06 | 11 | 1 | **10** | 🟡 Atenção |
+| UC07 | 20 | 2,5 | **17,5** | 🟢 OK |
+| UC08 | 20 | 0 | **20** | 🔴 Iniciar urgente |
+| UC09 | 11 | 0 | **11** | 🔴 Iniciar urgente |
 
 > Atualize esta tabela em `PROJETO-AULAS-1-TRIMESTRE.md` após cada aula.
 
@@ -153,9 +153,9 @@ Usar apenas em aulas de avaliação ou revisão geral
 ### Restrições obrigatórias
 1. Nunca repetir a mesma disciplina nos dois blocos do mesmo dia
 2. Nunca colocar duas disciplinas pesadas na mesma semana 3+3 seguidas sem uma leve entre elas
-3. D03-UC01 (Matemática) e D09-UC07 (Estatística): não dar na mesma aula — são cognitivamente parecidas
-4. D02-UC01 (Inglês): sempre no bloco 3 (1 HA) ou integrado ao bloco de D01 (fundamentos)
-5. D08-UC06 (Banco de Dados): iniciar no Bloco 1 — disciplina nova + pesada requer foco total
+3. UC03 (Matemática) e UC09 (Estatística): não dar na mesma aula — são cognitivamente parecidas
+4. UC02 (Inglês): sempre no bloco 3 (1 HA) ou integrado ao bloco de D01 (fundamentos)
+5. UC08 (Banco de Dados): iniciar no Bloco 1 — disciplina nova + pesada requer foco total
 
 ---
 
@@ -220,9 +220,9 @@ Quando uma aula de reposição for necessária:
 
 | Tipo | Padrão | Exemplo |
 |---|---|---|
-| Slides | `A{NN}-D{XX}-UC{YY}.md` | `A05-D05-UC03.md` |
-| Exercícios | `A{NN}-D{XX}-UC{YY}-exercicios.md` | `A05-D05-UC03-exercicios.md` |
-| Reposição | `RA{NN}-D{XX}-UC{YY}.md` | `RA07-D01-UC01.md` |
+| Slides | `A{NN}-D{XX}-UC{YY}.md` | `A05-UC05.md` |
+| Exercícios | `A{NN}-D{XX}-UC{YY}-exercicios.md` | `A05-UC05-exercicios.md` |
+| Reposição | `RA{NN}-D{XX}-UC{YY}.md` | `RA07-UC01.md` |
 | Tarefa | `A{NN}-tarefa.md` | `A05-tarefa.md` |
 
 ---

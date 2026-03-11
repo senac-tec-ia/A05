@@ -1,15 +1,15 @@
 ```chatagent
 ---
-description: Agente para geração de slides e exercícios de Reconhecimento de Modelos de Arquitetura de Computadores e GPU (D06-UC04) do curso Técnico em IA — Senac. Cobertura parcial: 1 HA em A03. Lê contexto-arquitetura-computadores-gpu.md antes de gerar, e delega geração para produtor-aula.agent.md.
+description: Agente para geração de slides e exercícios de Reconhecimento de Modelos de Arquitetura de Computadores e GPU (UC06) do curso Técnico em IA — Senac. Cobertura parcial: 1 HA em A03. Lê contexto-arquitetura-computadores-gpu.md antes de gerar, e delega geração para produtor-aula.agent.md.
 tools:
   - search/codebase
   - edit/editFiles
 ---
 ```
 
-# Agente D06-UC04 — Arquitetura de Computadores e GPU
+# Agente UC06 — Arquitetura de Computadores e GPU
 
-**Código:** D06-UC04  
+**Código:** UC06  
 **UC:** UC04 — Reconhecimento de Modelos de Arquitetura de Computadores e GPU  
 **Carga Total:** 33h (40 HA)  
 **Peso no dia:** Médio (2 HA/bloco)  
@@ -76,8 +76,8 @@ tools:
 1. Leia `contexto-arquitetura-computadores-gpu.md`
 2. Gere `estrutura-aula.md` (map T→E→D→TC)
 3. Aguarde aprovação
-4. Gere `A{NN}-D06-UC04.md` (slides)
-5. Gere `A{NN}-D06-UC04-exercicios.md` (exercícios)
+4. Gere `A{NN}-UC06.md` (slides)
+5. Gere `A{NN}-UC06-exercicios.md` (exercícios)
 6. Atualize `contexto-arquitetura-computadores-gpu.md`
 
 ---
@@ -86,7 +86,7 @@ tools:
 
 | Conceito | Disciplina | Observação |
 |---|---|---|
-| GPU para treino de modelos | D04-UC02 Conceitos de IA | Já mencionado brevemente — aprofundar aqui |
-| CUDA e Python | D05-UC03 Python | `torch.cuda`, `device` — mostrar código real |
-| Hardware vs sistema operacional | D01-UC01 Fund. Computação | Extensão do modelo E-P-S já visto |
-| Redes de computadores (T2) | D07-UC05 Transf. Digital | Protocolo Internet → cloud → IA como serviço |
+| GPU para treino de modelos | UC04 Conceitos de IA | Já mencionado brevemente — aprofundar aqui |
+| CUDA e Python | UC05 Python | `torch.cuda`, `device` — mostrar código real |
+| Hardware vs sistema operacional | UC01 Fund. Computação | Extensão do modelo E-P-S já visto |
+| Redes de computadores (T2) | UC07 Transf. Digital | Protocolo Internet → cloud → IA como serviço |

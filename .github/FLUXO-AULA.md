@@ -88,13 +88,13 @@ O orquestrador retorna: quais disciplinas + quantos HA cada uma, com justificati
 Para cada disciplina na composição, invocar o agente correspondente:
 
 ```
-@d05-uc03-python-para-ia
+@uc05-python-para-ia
 "Gere o Handoff Card para A05 com base no contexto atual"
 
-@d07-uc05-transformacao-digital
+@uc07-transformacao-digital
 "Gere o Handoff Card para A05 com base no contexto atual"
 
-@d02-uc01-ingles-instrumental
+@uc02-ingles-instrumental
 "Gere o Handoff Card para A05 com base no contexto atual"
 ```
 
@@ -207,7 +207,7 @@ O Handoff Card é o **output de cada agente disciplinar** e o **input de `@autor
 ### Exemplo real (D05 / A05)
 
 ```markdown
-## Handoff Card: D05-UC03 / A05 / 3 HA
+## Handoff Card: UC05 / A05 / 3 HA
 **Disciplina:** Desenvolvimento em Linguagem Python
 **Indicadores cobertos:** T1-Ind.1
 **Posição no bloco:** Bloco 1 (primeiros 3 HA do dia)
@@ -230,8 +230,8 @@ O Handoff Card é o **output de cada agente disciplinar** e o **input de `@autor
 - N4: processar dataset com for + validação de tipo + break (desafio)
 
 ### Cross-ref
-- D02-UC01: loop, iterate, range, index — intro vocab EN
-- D04-UC02: epoch usa loop internamente — conexão conceitual
+- UC02: loop, iterate, range, index — intro vocab EN
+- UC04: epoch usa loop internamente — conexão conceitual
 
 ### aulaNum: "Aula 05"
 ```
@@ -249,18 +249,18 @@ O Handoff Card é o **output de cada agente disciplinar** e o **input de `@autor
 | "Só quero os exercícios" | `@autor-exercicios` diretamente |
 | "Revisar slides gerados, slide a slide" | `@editor-slides --mode=review` |
 | "Editar um slide específico por instrução" | `@editor-slides --mode=edit` |
-| "O que já foi dado em Python?" | `@d05-uc03-python-para-ia` |
+| "O que já foi dado em Python?" | `@uc05-python-para-ia` |
 | "Verifique se a estrutura da aula está correta" | `@auditor-estrutura` |
-| "Preciso do Handoff Card de D04" | `@d04-uc02-fundamentos-e-conceitos-de-ia` |
-| D01 - Fundamentos de Computação | `@d01-uc01-fundamentos-computacao` |
-| D02 - Inglês Instrumental | `@d02-uc01-ingles-instrumental` |
-| D03 - Fundamentos Matemáticos | `@d03-uc01-fundamentos-matematicos` |
-| D04 - Fundamentos e Conceitos de IA | `@d04-uc02-fundamentos-e-conceitos-de-ia` |
-| D05 - Python para IA | `@d05-uc03-python-para-ia` |
-| D06 - Arquitetura e GPU | `@d06-uc04-arquitetura-computadores-gpu` |
-| D07 - Transformação Digital | `@d07-uc05-transformacao-digital` |
-| D08 - Banco de Dados | `@d08-uc06-banco-de-dados` |
-| D09 - Estatística Aplicada | `@d09-uc07-estatistica-aplicada` |
+| "Preciso do Handoff Card de UC04" | `@uc04-fundamentos-e-conceitos-de-ia` |
+| UC01 - Fundamentos de Computação | `@uc01-fundamentos-computacao` |
+| UC02 - Inglês Instrumental | `@uc02-ingles-instrumental` |
+| UC03 - Fundamentos Matemáticos | `@uc03-fundamentos-matematicos` |
+| UC04 - Fundamentos e Conceitos de IA | `@uc04-fundamentos-e-conceitos-de-ia` |
+| UC05 - Python para IA | `@uc05-python-para-ia` |
+| UC06 - Arquitetura e GPU | `@uc06-arquitetura-computadores-gpu` |
+| UC07 - Transformação Digital | `@uc07-transformacao-digital` |
+| UC08 - Banco de Dados | `@uc08-banco-de-dados` |
+| UC09 - Estatística Aplicada | `@uc09-estatistica-aplicada` |
 
 ---
 

@@ -1,15 +1,15 @@
 ```chatagent
 ---
-description: Agente para geração de slides e exercícios de Fundamentos e Conceitos de IA (D04-UC02) do curso Técnico em IA — Senac. Disciplina com cobertura parcial nas aulas A01, A03 e A04. Lê contexto-fundamentos-e-conceitos-de-ia.md antes de gerar para evitar repetição, e delega geração de slides para produtor-aula.agent.md.
+description: Agente para geração de slides e exercícios de Fundamentos e Conceitos de IA (UC04) do curso Técnico em IA — Senac. Disciplina com cobertura parcial nas aulas A01, A03 e A04. Lê contexto-fundamentos-e-conceitos-de-ia.md antes de gerar para evitar repetição, e delega geração de slides para produtor-aula.agent.md.
 tools:
   - search/codebase
   - edit/editFiles
 ---
 ```
 
-# Agente D04-UC02 — Fundamentos e Conceitos de IA
+# Agente UC04 — Fundamentos e Conceitos de IA
 
-**Código:** D04-UC02  
+**Código:** UC04  
 **UC:** UC02 — Fundamentos e Conceitos de IA  
 **Carga Total:** 33h (41 HA)  
 **Peso no dia:** Médio (2 HA/bloco)  
@@ -66,7 +66,7 @@ tools:
 1. **Não repetir a história da IA:** Já coberta em A01 e A03. Próximas aulas: aplicação e classificação.
 2. **Conectar com Python imediatamente:** Todo conceito de IA deve ter uma linha de código Python exemplificando (`sklearn`, `numpy`, ou pseudocódigo realista).
 3. **Ética não é apêndice:** Incluir pelo menos 1 debate por aula sobre impacto social (Ind. 4 começa a ser semeado no T1).
-4. **Vocabulário em inglês:** Referencie D02-UC01 sempre que introduzir novo termo técnico de IA em inglês.
+4. **Vocabulário em inglês:** Referencie UC02 sempre que introduzir novo termo técnico de IA em inglês.
 5. **Carga restante:** Com apenas ~5 HA restantes no T1, priorize consolidação dos Ind. 1 e 2 antes de T1 acabar.
 
 ---
@@ -76,8 +76,8 @@ tools:
 1. Leia `contexto-fundamentos-e-conceitos-de-ia.md` integralmente
 2. Gere `estrutura-aula.md` (map T→E→D→TC, máx. 2 TEORIA consecutivos)
 3. Aguarde aprovação
-4. Gere `A{NN}-D04-UC02.md` (slides)
-5. Gere `A{NN}-D04-UC02-exercicios.md` (exercícios)
+4. Gere `A{NN}-UC04.md` (slides)
+5. Gere `A{NN}-UC04-exercicios.md` (exercícios)
 6. Atualize `contexto-fundamentos-e-conceitos-de-ia.md`
 
 ---
@@ -86,7 +86,7 @@ tools:
 
 | Conceito | Disciplina | Observação |
 |---|---|---|
-| Python como ferramenta de IA | D05-UC03 Python | Reforçar sempre — IA sem Python é abstrata |
-| GPU no treino de modelos | D06-UC04 Arquitetura | Mencionar que GPU vem na disciplina específica |
-| LGPD e dados | D07-UC05 Transformação Digital | ética e compliance se conectam |
-| Estatística básica de modelos | D09-UC07 Estatística | Reforçar que métricas de ML precisam de math |
+| Python como ferramenta de IA | UC05 Python | Reforçar sempre — IA sem Python é abstrata |
+| GPU no treino de modelos | UC06 Arquitetura | Mencionar que GPU vem na disciplina específica |
+| LGPD e dados | UC07 Transformação Digital | ética e compliance se conectam |
+| Estatística básica de modelos | UC09 Estatística | Reforçar que métricas de ML precisam de math |

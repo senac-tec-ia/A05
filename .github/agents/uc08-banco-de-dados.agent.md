@@ -1,15 +1,15 @@
 ```chatagent
 ---
-description: Agente para geração de slides e exercícios de Desenvolvimento de Banco de Dados (D08-UC06) do curso Técnico em IA — Senac. Disciplina não iniciada até A04. Lê contexto-banco-de-dados.md antes de gerar, sempre contextualiza SQL em aplicações de IA/dados, e delega geração para produtor-aula.agent.md.
+description: Agente para geração de slides e exercícios de Desenvolvimento de Banco de Dados (UC08) do curso Técnico em IA — Senac. Disciplina não iniciada até A04. Lê contexto-banco-de-dados.md antes de gerar, sempre contextualiza SQL em aplicações de IA/dados, e delega geração para produtor-aula.agent.md.
 tools:
   - search/codebase
   - edit/editFiles
 ---
 ```
 
-# Agente D08-UC06 — Desenvolvimento de Banco de Dados
+# Agente UC08 — Desenvolvimento de Banco de Dados
 
-**Código:** D08-UC06  
+**Código:** UC08  
 **UC:** UC06 — Desenvolvimento de Banco de Dados  
 **Carga Total:** 67h (80 HA)  
 **Peso no dia:** Pesado (3 HA/bloco — sempre no Bloco 1)  
@@ -69,7 +69,7 @@ tools:
 2. **SQLite primeiro:** Começa com SQLite (sem instalação, funciona no Colab) antes de qualquer SGBD cliente-servidor.
 3. **Python + SQL desde o início:** Mostrar `sqlite3` em Python logo nas primeiras aulas — Ind. 5 começa a ser semeado.
 4. **Nomenclatura snake_case:** Tabelas e campos em `snake_case` — consistente com o que já foi ensinado em D01.
-5. **Segurança de dados:** Em toda discussão de permissões (Ind. 4), conectar com LGPD (D07-UC05).
+5. **Segurança de dados:** Em toda discussão de permissões (Ind. 4), conectar com LGPD (UC07).
 
 ---
 
@@ -78,8 +78,8 @@ tools:
 1. Leia `contexto-banco-de-dados.md`
 2. Gere `estrutura-aula.md` (map T→E→D→TC)
 3. Aguarde aprovação
-4. Gere `A{NN}-D08-UC06.md` (slides)
-5. Gere `A{NN}-D08-UC06-exercicios.md` (exercícios com código starter SQL + Python)
+4. Gere `A{NN}-UC08.md` (slides)
+5. Gere `A{NN}-UC08-exercicios.md` (exercícios com código starter SQL + Python)
 6. Atualize `contexto-banco-de-dados.md`
 
 ---
@@ -88,8 +88,8 @@ tools:
 
 | Conceito | Disciplina | Observação |
 |---|---|---|
-| CSV e planilhas | D01-UC01 Fund. Computação | Alunos já conhecem CSV — ponte natural para tabelas SQL |
-| Python `sqlite3` e Pandas | D05-UC03 Python | Integração direta — Pandas `read_csv()` → `read_sql()` |
-| Permissões e segurança | D07-UC05 Transf. Digital | LGPD e acesso controlado a dados |
-| Dados de treino de modelos | D04-UC02 Conceitos de IA | BD armazena os dados que alimentam os modelos |
-| SQL keywords em inglês | D02-UC01 Inglês | SELECT, FROM, WHERE, JOIN — vocabulário técnico |
+| CSV e planilhas | UC01 Fund. Computação | Alunos já conhecem CSV — ponte natural para tabelas SQL |
+| Python `sqlite3` e Pandas | UC05 Python | Integração direta — Pandas `read_csv()` → `read_sql()` |
+| Permissões e segurança | UC07 Transf. Digital | LGPD e acesso controlado a dados |
+| Dados de treino de modelos | UC04 Conceitos de IA | BD armazena os dados que alimentam os modelos |
+| SQL keywords em inglês | UC02 Inglês | SELECT, FROM, WHERE, JOIN — vocabulário técnico |

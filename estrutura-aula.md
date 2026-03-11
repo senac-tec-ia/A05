@@ -10,10 +10,10 @@
 
 | Bloco | Horário | HA | Disciplina | Tópico Central |
 |---|---|---|---|---|
-| 1 | 7h10–9h30 | 3 | D05-UC03 Python | Loops (`for`/`while`) e Listas |
+| 1 | 7h10–9h30 | 3 | UC05 Python | Loops (`for`/`while`) e Listas |
 | — | 9h30–9h50 | — | Intervalo | — |
-| 2 | 9h50–11h10 | 2 | D03-UC01 Matemática | **INÍCIO** — Aritmética comp. + Álgebra linear |
-| 3 | 11h10–12h00 | 1 | D09-UC07 Estatística | **INÍCIO** — Função linear `y = ax + b` |
+| 2 | 9h50–11h10 | 2 | UC03 Matemática | **INÍCIO** — Aritmética comp. + Álgebra linear |
+| 3 | 11h10–12h00 | 1 | UC09 Estatística | **INÍCIO** — Função linear `y = ax + b` |
 
 ### Justificativa da composição
 
@@ -36,7 +36,7 @@
 
 ---
 
-## BLOCO 1 — D05-UC03 Python: Loops e Listas
+## BLOCO 1 — UC05 Python: Loops e Listas
 **Slides: 1–12** | Horário: 7h10–9h30 | 3 HA (~140 min)
 **Contexto IA:** iterar sobre listas de tokens, acurácias e predições de modelos
 **Dinâmica:** exercícios em dupla (padrão consolidado do campo)
@@ -58,7 +58,7 @@
 
 ---
 
-## BLOCO 2 — D03-UC01 Fundamentos Matemáticos: Aritmética + Álgebra
+## BLOCO 2 — UC03 Fundamentos Matemáticos: Aritmética + Álgebra
 **Slides: 13–18** | Horário: 9h50–11h10 | 2 HA (~100 min)
 **Status:** INÍCIO DA DISCIPLINA
 **Contexto IA:** operadores Python já vistos em A04 — agora formalizando a notação matemática por trás
@@ -74,7 +74,7 @@
 
 ---
 
-## BLOCO 3 — D09-UC07 Estatística: Função Linear
+## BLOCO 3 — UC09 Estatística: Função Linear
 **Slides: 19–21** | Horário: 11h10–12h00 | 1 HA (~50 min)
 **Status:** INÍCIO DA DISCIPLINA
 **Contexto IA:** regressão linear como "prever preço de GPU pelo ano" — intuição sem fórmulas pesadas
@@ -101,9 +101,9 @@
 
 | Bloco | Disciplina | Slides | Exercícios | Dinâmicas | Debates |
 |---|---|---|---|---|---|
-| 1 | D05-UC03 Python | 12 | EX01, EX02, EX03 | 1 | 0 |
-| 2 | D03-UC01 Matemática | 6 | EX04, EX05 | 0 | 1 |
-| 3 | D09-UC07 Estatística | 3 | EX06 | 0 | 0 |
+| 1 | UC05 Python | 12 | EX01, EX02, EX03 | 1 | 0 |
+| 2 | UC03 Matemática | 6 | EX04, EX05 | 0 | 1 |
+| 3 | UC09 Estatística | 3 | EX06 | 0 | 0 |
 | TC | Tarefa de Casa | 1 | — | — | — |
 | **Total** | | **22** | **6** | **1** | **1** |
 

@@ -1,15 +1,15 @@
 ```chatagent
 ---
-description: Agente para geração de slides e exercícios de Desenvolvimento de Linguagem Python (D05-UC03) do curso Técnico em IA — Senac. Disciplina com maior carga horária (80 HA). Lê contexto-python-para-ia.md antes de gerar, sempre usa exemplos de contexto IA/dados, e delega geração para produtor-aula.agent.md.
+description: Agente para geração de slides e exercícios de Desenvolvimento de Linguagem Python (UC05) do curso Técnico em IA — Senac. Disciplina com maior carga horária (80 HA). Lê contexto-python-para-ia.md antes de gerar, sempre usa exemplos de contexto IA/dados, e delega geração para produtor-aula.agent.md.
 tools:
   - search/codebase
   - edit/editFiles
 ---
 ```
 
-# Agente D05-UC03 — Desenvolvimento de Linguagem Python
+# Agente UC05 — Desenvolvimento de Linguagem Python
 
-**Código:** D05-UC03  
+**Código:** UC05  
 **UC:** UC03 — Desenvolvimento de Linguagem Python  
 **Carga Total:** 67h (80 HA)  
 **Peso no dia:** Pesado (3 HA/bloco — sempre no Bloco 1)  
@@ -85,8 +85,8 @@ tools:
 1. Leia `contexto-python-para-ia.md` integralmente
 2. Gere `estrutura-aula.md` (map T→E→D→TC)
 3. Aguarde aprovação
-4. Gere `A{NN}-D05-UC03.md` (slides)
-5. Gere `A{NN}-D05-UC03-exercicios.md` (exercícios com código starter obrigatório)
+4. Gere `A{NN}-UC05.md` (slides)
+5. Gere `A{NN}-UC05-exercicios.md` (exercícios com código starter obrigatório)
 6. Atualize `contexto-python-para-ia.md`
 
 ---
@@ -95,8 +95,8 @@ tools:
 
 | Conceito | Disciplina | Observação |
 |---|---|---|
-| Vocabulário técnico Python (def, loop, list) | D02-UC01 Inglês | Referenciar quando introduzir termos novos |
-| Lógica booleana | D03-UC01 Fund. Matemáticos | Reforça AND/OR/NOT vistos na matemática |
-| Algoritmos de IA em Python | D04-UC02 Conceitos de IA | Python é a ferramenta que executa os conceitos |
-| Pandas + CSV | D08-UC06 Banco de Dados | CSV é a ponte entre Python e banco de dados |
-| NumPy + matrizes | D03-UC01 Fund. Matemáticos | Reforça conceito de matrizes |
+| Vocabulário técnico Python (def, loop, list) | UC02 Inglês | Referenciar quando introduzir termos novos |
+| Lógica booleana | UC03 Fund. Matemáticos | Reforça AND/OR/NOT vistos na matemática |
+| Algoritmos de IA em Python | UC04 Conceitos de IA | Python é a ferramenta que executa os conceitos |
+| Pandas + CSV | UC08 Banco de Dados | CSV é a ponte entre Python e banco de dados |
+| NumPy + matrizes | UC03 Fund. Matemáticos | Reforça conceito de matrizes |

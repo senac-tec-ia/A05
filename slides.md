@@ -170,7 +170,7 @@ bgPreset: palette
 # Bloco 1
 ## Python: Loops e Listas
 
-*7h10 - 9h30 · 3 HA · D05-UC03*
+*7h10 - 9h30 · 3 HA · UC05*
 
 ---
 layout: default
@@ -660,7 +660,7 @@ bgPreset: palette
 # Bloco 2
 ## Matemática: Aritmética e Álgebra
 
-*9h50 - 11h10 · 2 HA · D03-UC01 · Primeiro contato*
+*9h50 - 11h10 · 2 HA · UC03 · Primeiro contato*
 
 ---
 layout: default
@@ -857,7 +857,7 @@ bgPreset: palette
 # Bloco 3
 ## Estatística: Função Linear
 
-*11h10 - 12h00 · 1 HA · D09-UC07 · Primeiro contato*
+*11h10 - 12h00 · 1 HA · UC09 · Primeiro contato*
 
 ---
 layout: default
