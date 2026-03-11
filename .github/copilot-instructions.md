@@ -89,10 +89,12 @@ If a context file does not yet exist for a UC, create it using the standard form
 2. **Slide order within each class (aulaNum):** `[TEORIA]` → `[EXERCICIO]` → `[DINAMICA]` → `[TAREFA DE CASA]`. Never place homework before exercises or exercises before theory.
 3. **Theory density limit:** Never generate more than **2 consecutive theory slides** without an exercise, debate, or dynamic in between.
 4. **Pre-generation gate:** Before writing any slide, generate `estrutura-aula.md` and wait for explicit user approval. Never touch `slides.md` before approval.
-5. **Em-dash prohibition:** Never use `—` in any slide title, bullet, or body text. Use `:` for enumerations, `-` in lists, comma in prose.
+5. **Em-dash prohibition:** Never use `—` anywhere: not in slide titles, bullets, body text, code comments, or any generated prose. In pt-BR use `:` for enumerations, `,` for continuations in prose, and `-` only in list bullets. This applies to ALL output, not just slides.
 6. **Exercise progression:** Exercises within a class must escalate: level 1 (comprehension) → level 2 (guided application) → level 3 (independent application) → level 4 (challenge). Do not skip levels.
 7. **Starter code:** Every coding exercise must include a starter code block with the function signature already written. Students never start from a blank file.
 8. **Context-first rule:** Every coding example in this course should use AI/data themes (tokens, model outputs, datasets) — not generic math calculators or unrelated domains.
+9. **Table-code separation:** A table and a code block must NEVER appear on the same slide. If both are needed, split into two slides: one with the table, one with the code. Two tables on the same slide are also forbidden. Two code blocks on the same slide (`default` layout) are forbidden — use `two-cols-text` only if each column genuinely has its own independent block.
+10. **One concept per intro slide:** When introducing an operator (`and`, `or`, `not`, `==`, etc.), a keyword (`if`, `for`, `while`, etc.), or a built-in function (`len()`, `abs()`, etc.) for the **first time**, give it its own slide. That slide must contain: the term in English (code notation) + its Portuguese translation + what it does in one sentence + one minimal example. Never introduce two new concepts on the same slide.
 
 ---
 

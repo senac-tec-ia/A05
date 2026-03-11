@@ -1,6 +1,6 @@
 ---
 # ─────────────────────────────────────────────────────────────────
-#  A05 — 12/03/2026 — Python: Loops e Listas · Matemática · Estatística
+#  A05 — 12/03/2026 — Python: Operadores, Strings e Condicionais · Matemática · Estatística
 # ─────────────────────────────────────────────────────────────────
 theme: ./
 colorSchema: dark
@@ -14,37 +14,11 @@ bgPreset: palette
 # ─────────────────────────────────────────────────────────────────
 ---
 
----
-layout: cover
-bgPreset: palette
----
-
-<!-- SLIDE 1 - Capa -->
 
 # Aula 05
-## Python: Loops e Listas · Matemática · Estatística
+## Python: Operadores, Strings e Condicionais · Matemática · Estatística
 
 *12 de março de 2026*
-
----
-layout: brainstorm
-card: true
-bgPreset: palette
-pulse: true
----
-
-<!-- SLIDE 2 - Revisão relâmpago (sem funções) -->
-<!-- objetivo: ativar memória com perguntas sobre o que foi definitivamente consolidado — sem mencionar def/funções -->
-
-# Revisão Relâmpago
-
-**3 perguntas, 2 minutos — sem pesquisar**
-
-- O que aparece na tela quando rodamos `print("Python")`?
-- Qual a diferença entre `x = 5` e `x = "cinco"`?
-- Complete: `if nota >= 7: ____`
-
-> Já sabemos isso. Hoje vamos além: repetição e coleções.
 
 ---
 layout: default
@@ -52,7 +26,94 @@ card: true
 bgPreset: default
 ---
 
-<!-- SLIDE 3 - Consolidação: print() e f-string -->
+<!-- SLIDE 2 - Tipos de dados: por que isso importa -->
+<!-- objetivo: mostrar por que tipos existem e a diferença entre x=5 e x='5' -->
+
+# Tipos de Dados: Por Que Isso Importa?
+
+## `x = 5` vs `x = '5'`
+
+```python
+x = 5      # número inteiro — int
+y = '5'    # texto — str
+
+print(x + x)   # 10  → somou
+print(y + y)   # '55' → colou junto
+```
+
+O Python trata os dois de jeitos completamente diferentes.
+**Tipo errado = resultado errado, ou erro na execução.**
+
+<v-click>
+
+> Para o Python, `5` e `'5'` são tão diferentes quanto uma maçã e uma laranja.
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 3 - Aspas em Python -->
+<!-- objetivo: mostrar diferença entre aspas simples e duplas e quando usar cada uma -->
+
+# Aspas em Python: `'` ou `"` ?
+
+```python
+nome = 'Ana'        # aspas simples — funciona
+cidade = "Maceió"   # aspas duplas  — também funciona
+
+# use duplas quando tiver apóstrofo dentro:
+frase = "it's Python"   # ✅
+frase = 'it\'s Python'  # funciona, mas feio
+```
+
+<v-click>
+
+> Regra prática: use `"duplas"` por padrão. Reserve `'simples'` para quando precisar de aspas dentro da string.
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 4 - Interpolação com f-string -->
+<!-- objetivo: apresentar f-string como a forma profissional de montar texto com variáveis -->
+
+# Interpolação com f-string
+
+```python
+nome = "Bruno"
+nota = 8.5
+
+# cole variável dentro do texto com { }
+print(f"Aluno: {nome}, nota: {nota}")
+# → Aluno: Bruno, nota: 8.5
+
+print(f"Aprovado: {nota >= 7}")
+# → Aprovado: True
+```
+
+<v-click>
+
+**Como funciona:** o `f` antes das aspas ativa as chaves `{}`. Tudo dentro de `{}` é executado como Python e colado no texto.
+
+> Sem o `f`, as chaves aparecem literalmente na tela. Com o `f`, viram valores reais.
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 5 - Consolidação: print() e f-string -->
 <!-- objetivo: fixar print() e f-string como ferramenta de saída antes de entrar em loops -->
 
 # `print()` — Fixando a Ferramenta
@@ -82,13 +143,13 @@ print(f"Aprovado: {nota >= 7}")   # Aprovado: True
 </v-click>
 
 ---
-layout: two-cols-text
+layout: default
 card: true
 bgPreset: default
 ---
 
-<!-- SLIDE 4 - Tipos de dados: as caixinhas -->
-<!-- objetivo: consolidar os 4 tipos com metáfora visual e armadilhas comuns antes de loops -->
+<!-- SLIDE 6 - Os 4 tipos de dados básicos -->
+<!-- objetivo: consolidar os 4 tipos com metáfora visual das caixinhas antes de loops -->
 
 # Os 4 Tipos de Dados Básicos
 
@@ -101,9 +162,22 @@ bgPreset: default
 | `float` | número decimal | `9.5`, `3.14` |
 | `bool` | sim ou não | `True`, `False` |
 
-::right::
+<v-click>
 
-## Cuidado com as Armadilhas
+> Cada variável tem exatamente um tipo. O Python decide pelo que você escreveu: tem aspas = `str`. Sem aspas com ponto = `float`. Sem aspas sem ponto = `int`. `True`/`False` = `bool`.
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 7 - Armadilhas de tipo -->
+<!-- objetivo: mostrar as armadilhas clássicas de tipo com código executável -->
+
+# Cuidado com as Armadilhas de Tipo
 
 ```python
 # "3" é str — não é o número 3!
@@ -129,7 +203,7 @@ card: true
 bgPreset: default
 ---
 
-<!-- SLIDE 5 - Aquecimento: identifique o tipo -->
+<!-- SLIDE 8 - Aquecimento: identifique o tipo -->
 <!-- objetivo: consolidar tipos com exercício de leitura — prática antes de loops -->
 
 # Aquecimento — Qual o Tipo?
@@ -149,7 +223,7 @@ f = 3.14                   # tipo: ___  ← igual ao de cima?
 
 <v-click>
 
-Agora rode no Colab e use `type()` para conferir:
+Agora rode no VS Code e use `type()` para conferir:
 
 ```python
 print(type(a))   # <class 'str'>
@@ -160,17 +234,33 @@ print(type(a))   # <class 'str'>
 </v-click>
 
 ---
-layout: center
+layout: default
 card: true
-bgPreset: palette
+bgPreset: default
 ---
 
-<!-- SLIDE 6 - Divisor Bloco 1 -->
+<!-- SLIDE 9 - Roteiro do bloco -->
+<!-- objetivo: orientar os alunos sobre o que vão aprender, reduzindo ansiedade antes de conteúdo novo -->
 
-# Bloco 1
-## Python: Loops e Listas
+# O Que Vamos Fazer Hoje
 
-*7h10 - 9h30 · 3 HA · UC05*
+Você já sabe criar variáveis e usar tipos básicos. Hoje vamos subir um degrau:
+
+<v-click>
+
+1. **Operadores de comparação**: `==`, `!=`, `<`, `>`, `<=`, `>=`
+2. **Operadores lógicos**: `and`, `or`, `not`
+3. **Condicionais**: revisão profunda de `if`, `elif`, `else`
+4. **Funções de string**: `len()`, `.upper()`, `.lower()`, `.strip()`, `.replace()`
+5. **Funções de número**: `abs()`, `round()`, `int()`, `float()`, `str()`
+
+</v-click>
+
+<v-click>
+
+> Hoje sem listas. Só operadores, decisões e ferramentas de texto e número.
+
+</v-click>
 
 ---
 layout: default
@@ -178,141 +268,32 @@ card: true
 bgPreset: default
 ---
 
-<!-- SLIDE 7 - Você já faz loops todo dia -->
-<!-- objetivo: criar intuição sobre repetição com analogias do cotidiano adolescente ANTES de qualquer código -->
+<!-- SLIDE 10 - Operadores de comparação -->
+<!-- objetivo: apresentar os 6 operadores de comparação com resultado bool -->
 
-# Você Já Faz Loops Todo Dia
+# Operadores de Comparação
 
-<v-click>
-
-Pense na sua rotina:
-
-- **Spotify:** toca faixa 1, faixa 2, faixa 3... até acabar a playlist
-- **WhatsApp:** você abre cada mensagem não lida, uma por uma
-- **Chamada:** professor fala nome 1, nome 2... até chamar todos
-- **Jogo:** personagem anda, pula, ataca — repete centenas de vezes por segundo
-
-</v-click>
-
-<v-click>
-
-> **Loop = repetir uma ação para cada item de uma lista** — ou enquanto uma condição for verdadeira.
-
-Sem loop: você escreveria `print("Ana")`, `print("Bruno")`, `print("Carla")`... para cada nome.
-**Com loop: Python faz isso por você, quantas vezes precisar.**
-
-</v-click>
-
----
-layout: two-cols-text
-card: true
-bgPreset: default
----
-
-<!-- SLIDE 8 - Da vida real para o Python -->
-<!-- objetivo: criar ponte explícita entre a intuição cotidiana e a sintaxe do for antes de ver qualquer código de IA -->
-
-# Da Vida Real para o Python
-
-## Chamada da turma (passo a passo)
-
-1. Pegar a lista de nomes
-2. **Para cada nome** na lista: falar em voz alta
-3. Repetir até o fim da lista
-
-::right::
-
-## Em Python
+Toda comparação retorna `True` ou `False`:
 
 ```python
-turma = ["Ana", "Bruno", "Carla", "Daniel"]
-
-for nome in turma:
-    print(nome, "- Presente!")
-
-# saída:
-# Ana - Presente!
-# Bruno - Presente!
-# Carla - Presente!
-# Daniel - Presente!
-```
-
-**Como ler em voz alta:**
-*"Para cada `nome` dentro de `turma`, execute o bloco abaixo"*
-
-- `for` → começa o loop
-- `nome` → variável temporária (você escolhe o nome!)
-- `in turma` → de onde vêm os itens
-- `:` → **obrigatório**, não esqueça!
-- 4 espaços → tudo dentro do loop fica recuado
-
----
-layout: default
-card: true
-bgPreset: default
----
-
-<!-- SLIDE 9 - O loop for: sintaxe completa com range() -->
-<!-- objetivo: ver for com range() e iterar sobre coleões diferentes — ainda sem contexto IA -->
-
-# O loop `for` — Sintaxe Completa
-
-```python {1-4|5-8|9-12|all}
-# Exemplo 1: percorrer lista de valores
-notas = [7.5, 8.0, 6.5, 9.0]
-for nota in notas:
-    print(f"Nota: {nota}")
-
-# Exemplo 2: range() gera sequência de números
-for numero in range(5):         # 0, 1, 2, 3, 4
-    print(f"Número {numero}")
-
-# Exemplo 3: range com início e fim
-for numero in range(1, 6):      # 1, 2, 3, 4, 5
-    print(f"Questão {numero}")
+10 == 10    # True  — igual a
+10 != 9     # True  — diferente de
+10 > 5      # True  — maior que
+5 < 10      # True  — menor que
+10 >= 10    # True  — maior ou igual
+5 <= 10     # True  — menor ou igual
 ```
 
 <v-click>
-
-- `range(5)` → gera 0, 1, 2, 3, 4  *(termina **antes** do 5)*
-- `range(1, 6)` → gera 1, 2, 3, 4, 5  *(termina **antes** do 6)*
-- Indentação de 4 espaços define o que está **dentro** do loop
-
-</v-click>
-
----
-layout: default
-card: true
-bgPreset: default
----
-
-<!-- SLIDE 10 - EX00: leia e preveja — nível 0 -->
-<!-- objetivo: ensinar a ler código antes de escrever — habilidade essencial para quem nunca programou -->
-
-# EX00 - Leia e Preveja
-
-**Individual · 5 minutos · Nível 0 — sem digitar nada ainda**
-
-O que este código vai imprimir? Escreva no **caderno** antes de rodar:
 
 ```python
-frutas = ["maçã", "banana", "uva", "morango"]
-
-for fruta in frutas:
-    print("Fruta:", fruta)
-
-print(f"Total: {len(frutas)} frutas")
+nota = 7.5
+print(nota >= 7)    # True  — aprovado!
+print(nota == 10)   # False — não é nota máxima
+print(nota < 5)     # False — não está reprovado
 ```
 
-No caderno:
-1. Quantas linhas esse código imprime no total?
-2. Qual é a terceira linha impressa?
-3. O que `len(frutas)` retorna?
-
-<v-click>
-
-> Depois: rode no Colab e compare com o que escreveu no caderno.
-> **Ler código antes de rodar é uma habilidade profissional essencial.**
+> O resultado é sempre `bool`: `True` ou `False`. Esse valor pode ser guardado em variável ou usado direto num `if`.
 
 </v-click>
 
@@ -322,30 +303,139 @@ card: true
 bgPreset: default
 ---
 
-<!-- SLIDE 11 - EX01: complete a chamada (contexto cotidiano) -->
-<!-- objetivo: primeiro exercício de escrita — preencher lacunas em contexto completamente familiar -->
+<!-- SLIDE 11 - EX00: Verdadeiro ou Falso? -->
+<!-- objetivo: calcular expressões de comparação na mão antes de rodar código -->
 
-# EX01 - Complete a Chamada
+# EX00 - Verdadeiro ou Falso?
+
+**Individual · 5 minutos · Nível 0: calcule na mão**
+
+Antes de rodar, escreva `True` ou `False` para cada linha:
+
+```python
+# EX00 - Verdadeiro ou Falso?
+a = 8
+b = 5
+
+print(a > b)        # ___
+print(a == b)       # ___
+print(a != b)       # ___
+print(b >= 5)       # ___
+print(a + b > 15)   # ___
+print(a * 2 == 16)  # ___
+```
+
+<v-click>
+
+Agora rode no VS Code e confira.
+
+> Cuidado com `==` vs `=`: `==` pergunta, `=` atribui.
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 12 - Operadores lógicos -->
+<!-- objetivo: apresentar and, or, not com exemplos de aprovação como contexto -->
+
+# Operadores Lógicos
+
+Combine comparações com `and`, `or`, `not`:
+
+```python
+nota = 7.5
+frequencia = 0.80
+
+# and: as DUAS precisam ser True
+nota >= 7 and frequencia >= 0.75    # True — aprovado
+
+# or: PELO MENOS UMA precisa ser True
+nota >= 7 or frequencia >= 0.75     # True — alguma condição
+
+# not: inverte o resultado
+not (nota >= 7)                     # False — não é True
+```
+
+<v-click>
+
+| Operador | Resultado True quando... |
+|---|---|
+| `a and b` | `a` E `b` são True |
+| `a or b` | `a` OU `b` são True |
+| `not a` | `a` é False |
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 13 - Condicionais if/elif/else -->
+<!-- objetivo: aprofundar if/elif/else com múltiplas condições e operadores lógicos -->
+
+# Condicionais: `if`, `elif`, `else`
+
+Você já viu isso em A04. Agora com mais condições:
+
+```python {1-4|5-11|all}
+nota = 7.5
+frequencia = 0.80
+
+if nota >= 7 and frequencia >= 0.75:
+    print("Aprovado!")
+elif nota >= 5 and frequencia >= 0.75:
+    print("Recuperação")
+elif frequencia < 0.75:
+    print("Reprovado por falta")
+else:
+    print("Reprovado por nota")
+```
+
+<v-click>
+
+> O Python verifica cada `if`/`elif` de cima para baixo. Para na primeira condição `True`. O `else` é o "nenhuma das anteriores".
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 14 - EX01: Classificador de notas -->
+<!-- objetivo: praticar if/elif/else com múltiplos critérios de nota -->
+
+# EX01 - Classificador de Notas
 
 **Em dupla · 8 minutos · Nível 1**
 
-Complete os `___`. A lógica já está escrita pra vocês:
-
 ```python
-# EX01 - Chamada digital da turma
-turma = ["Alice", "Bruno", "Carla", "Daniel", "Eduarda"]
+# EX01 - Classificador de Notas
+def classificar(nota):
+    """Classifica a nota em conceito A, B, C, D ou F"""
+    if nota >= 9.0:
+        return ___    # "A"
+    elif nota >= 7.0:
+        return ___    # "B"
+    elif nota >= 5.0:
+        return ___    # "C"
+    elif nota >= 3.0:
+        return ___    # "D"
+    else:
+        return ___    # "F"
 
-# TAREFA 1: imprima cada nome com "Presente!" na frente
-for ___ in turma:
-    print(___, "- Presente!")
-
-# TAREFA 2: conte quantos alunos há na turma
-total = ___(turma)         # dica: use len()
-print(f"Total de alunos: {total}")
-
-# TAREFA 3: imprima os números de 1 a 5 usando range
-for numero in range(___):  # dica: range(1, 6) vai de 1 até 5
-    print(numero)
+# teste com esses valores:
+print(classificar(9.5))   # A
+print(classificar(7.0))   # B
+print(classificar(4.9))   # D
+print(classificar(1.0))   # F
 ```
 
 ---
@@ -354,203 +444,33 @@ card: true
 bgPreset: default
 ---
 
-<!-- SLIDE 12 - Bridge: cotidiano para IA (tokens) -->
-<!-- objetivo: mostrar que a lógica que usaram para nomes é exatamente o que a IA usa com tokens -->
+<!-- SLIDE 15 - Funções de string -->
+<!-- objetivo: apresentar as funções de string mais usadas em tratamento de dados de texto -->
 
-# Da Turma para a IA: É o Mesmo `for`
+# Funções de String
 
-O loop que você usou na chamada é **exatamente igual** ao que uma IA usa para processar texto:
-
-```python
-# Contexto cotidiano — você já fez isso:
-turma = ["Alice", "Bruno", "Carla"]
-for aluno in turma:
-    print(aluno)
-
-# Contexto IA — mesma sintaxe, outro contexto:
-tokens = ["machine", "learning", "é", "incrível"]
-for token in tokens:
-    print(token)   # IA processa palavra por palavra
-```
-
-<v-click>
-
-**Token** = menor unidade de texto que um modelo de linguagem processa.
-Quando você digita no ChatGPT, ele quebra seu texto em tokens e percorre cada um com um loop assim.
-
-> A sintaxe é idêntica. O que muda é o **significado** da lista.
-
-</v-click>
-
----
-layout: default
-card: true
-bgPreset: default
----
-
-<!-- SLIDE 13 - O loop while: analogia do alarme primeiro -->
-<!-- objetivo: criar intuição para while com condição de parada usando analogia do cotidiano antes do código -->
-
-# O loop `while` — Enquanto...
-
-<v-click>
-
-**Analogia do alarme:**
-O despertador toca, você aperta soneca. E repete... **enquanto** não for hora de levantar.
-
-```
-enquanto (hora_atual < hora_de_acordar):
-    tocar alarme
-    apertar soneca
-```
-
-</v-click>
-
-<v-click>
-
-**Em Python:**
+Strings têm ferramentas prontas. Use o `.` para chamar:
 
 ```python
-hora_atual = 6
-hora_de_acordar = 7
+modelo = "  GPT-4 Turbo  "
 
-while hora_atual < hora_de_acordar:
-    print(f"⏰ São {hora_atual}h — mais 5 minutinhos...")
-    hora_atual += 1    # avança 1 hora
-
-print("Hora de levantar!")
+len(modelo)               # 16  — tamanho (conta espaços!)
+modelo.strip()            # "GPT-4 Turbo"  — remove espaços das pontas
+modelo.upper()            # "  GPT-4 TURBO  "  — tudo maiúsculo
+modelo.lower()            # "  gpt-4 turbo  "  — tudo minúsculo
+modelo.replace("4", "5")  # "  GPT-5 Turbo  "  — troca trecho
 ```
-
-- `while condição:` → **enquanto** a condição for `True`, repete
-- A cada repetição, algo deve **mudar** — senão o loop nunca para!
-
-</v-click>
-
----
-layout: two-cols-text
-card: true
-bgPreset: default
----
-
-<!-- SLIDE 14 - break e continue: analogia da playlist -->
-<!-- objetivo: tornar break/continue concretos com analogia de playlist do Spotify antes de ver código -->
-
-# Controlando o Loop: `break` e `continue`
-
-## `break` — para tudo
-
-Como **fechar o Spotify** quando aparece anúncio:
-
-```python
-playlist = ["Música 1", "Música 2",
-            "ANUNCIO", "Música 3"]
-
-for musica in playlist:
-    if musica == "ANUNCIO":
-        break        # sai do loop
-    print(f"Tocando: {musica}")
-```
-
-Sai do loop assim que encontra o anúncio.
-
-::right::
-
-## `continue` — pula este item
-
-Como **apertar próxima** na faixa que você odeia:
-
-```python
-playlist = ["Música 1", "Música 2",
-            "Aquela que odeio", "Música 3"]
-
-for musica in playlist:
-    if musica == "Aquela que odeio":
-        continue     # pula esta, vai à próxima
-    print(f"Tocando: {musica}")
-```
-
-Não ouve aquela faixa, mas a playlist continua.
-
----
-layout: default
-card: true
-bgPreset: default
----
-
-<!-- SLIDE 15 - EX02: while em contexto cotidiano -->
-<!-- objetivo: praticar while com contexto acessível (contagem regressiva) antes de ir para contexto IA -->
-
-# EX02 - Contagem Regressiva
-
-**Em dupla · 8 minutos · Nível 1**
-
-Complete a contagem regressiva do foguete:
-
-```python
-# EX02 - Contagem Regressiva
-contagem = 10
-
-while ___:                   # enquanto contagem > 0
-    print(f"{contagem}...")
-    ___ -= 1                 # diminui 1 na contagem
-
-print("🚀 Lançamento!")
-
-# BÔNUS: pule o número 7 na contagem
-# dica: if + continue dentro do while
-```
-
-Resultado esperado:
-```
-10...
-9...
-8...
-...
-1...
-🚀 Lançamento!
-```
-
----
-layout: default
-card: true
-bgPreset: default
----
-
-<!-- SLIDE 16 - Listas em Python: analogia do carrinho -->
-<!-- objetivo: introduzir listas com metáfora cotidiana (carrinho de mercado) antes de índices e append -->
-
-# Listas em Python
 
 <v-click>
 
-**Analogia:** Lista = carrinho de mercado.
-Você pode adicionar itens, ver o que tem, pegar pelo número da posição.
+**Encadeamento: aplicar várias de uma vez**
 
-</v-click>
-
-<v-click>
-
-```python {1-2|3-6|7-10|all}
-# criar lista vazia (carrinho vazio)
-notas = []
-
-# adicionar itens com append (colocar no carrinho)
-notas.append(7.5)
-notas.append(8.0)
-notas.append(6.5)
-
-# acessar por índice — começa em 0!
-print(notas[0])    # 7.5  (primeiro item)
-print(notas[-1])   # 6.5  (último item — de trás)
-print(len(notas))  # 3    (quantos itens tem)
+```python
+nome_limpo = "  gpt-4 turbo  ".strip().upper()
+print(nome_limpo)   # "GPT-4 TURBO"
 ```
 
-</v-click>
-
-<v-click>
-
-> `max(notas)` → maior · `min(notas)` → menor · `sum(notas)` → soma total
-> **Atenção:** índice começa em 0. Primeiro item = `lista[0]`, não `lista[1]`.
+> Em dados reais, nomes de modelos e labels chegam sujos: espaços extras, caixa errada, caracteres estranhos. Essas funções são o primeiro passo de limpeza.
 
 </v-click>
 
@@ -560,31 +480,179 @@ card: true
 bgPreset: default
 ---
 
-<!-- SLIDE 17 - EX03: boletim da turma (contexto cotidiano) -->
-<!-- objetivo: praticar append + for em contexto cotidiano de notas antes de ir para contexto IA -->
+<!-- SLIDE 16 - EX02: Processe o nome do modelo -->
+<!-- objetivo: praticar strip, upper, lower, replace e len com contexto de nome de modelos de IA -->
 
-# EX03 - Boletim da Turma
+# EX02 - Processe o Nome do Modelo
+
+**Individual · 8 minutos · Nível 1**
+
+```python
+# EX02 - Processe o Nome do Modelo
+entrada = "  gemini 1.5 pro  "   # dado "sujo" de entrada
+
+# 1. qual o tamanho do texto (com espaços)?
+print(len(entrada))               # ___
+
+# 2. remova os espaços das pontas
+limpo = ___                       # use .strip()
+print(limpo)                      # "gemini 1.5 pro"
+
+# 3. coloque em maiúsculo
+maiusculo = ___                   # use .upper()
+print(maiusculo)                  # "GEMINI 1.5 PRO"
+
+# 4. troque "pro" por "flash" (na versão limpa)
+novo = limpo.replace(___, ___)
+print(novo)                       # "gemini 1.5 flash"
+```
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 17 - Funções de número -->
+<!-- objetivo: apresentar abs, round e os conversores int/float/str como caixa de ferramentas numérica -->
+
+# Funções de Número
+
+```python
+# abs() — valor absoluto (sem sinal negativo)
+abs(-7.5)           # 7.5
+abs(3)              # 3
+
+# round() — arredonda para N casas decimais
+round(3.14159, 2)   # 3.14
+round(7.5)          # 8    — arredonda para inteiro
+
+# conversores: traduzem entre tipos
+int("14")           # 14   — str para int
+int(9.9)            # 9    — float para int (corta, não arredonda!)
+float("9.5")        # 9.5  — str para float
+str(42)             # "42" — int para str
+```
+
+<v-click>
+
+> `int(9.9)` dá `9`, não `10`. Ele corta o decimal, não arredonda. Use `round()` para arredondar antes se precisar.
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 18 - EX03: Formate o relatório -->
+<!-- objetivo: combinar abs, round, str e f-string para montar saída formatada de dados de modelo -->
+
+# EX03 - Formate o Relatório
 
 **Individual · 8 minutos · Nível 2**
 
-Construa o boletim ao longo de 5 provas:
-
 ```python
-# EX03 - Boletim da Turma
-notas_turma = []
-nota_base = 5.0
+# EX03 - Formate o Relatório
+acuracia_bruta = 0.91666666
+variacao = -0.045
+nome_modelo = "  claude-3  "
 
-for prova in range(5):
-    nota = nota_base + ___ * 0.8    # melhora 0.8 a cada prova
-    notas_turma.___(___)             # adiciona à lista
+# 1. arredonde a acurácia para 2 casas decimais
+acuracia = ___             # use round()
 
-print("Notas:", notas_turma)
-print("Melhor nota:", max(notas_turma))
-print("Pior nota:", min(notas_turma))
-print("Quantidade:", len(notas_turma))
+# 2. valor absoluto da variação (sem sinal)
+variacao_abs = ___         # use abs()
+
+# 3. limpe o nome: sem espaços, em maiúsculo
+nome = ___                 # use .strip() e .upper()
+
+# 4. monte o relatório com f-string:
+print(f"Modelo: {nome}")
+print(f"Acurácia: {acuracia}")
+print(f"Variação: {variacao_abs}")
 ```
 
-> `prova` vale 0, 1, 2, 3, 4 a cada rodada. Como usar isso na conta?
+Saída esperada:
+```
+Modelo: CLAUDE-3
+Acurácia: 0.92
+Variação: 0.045
+```
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 19 - Integração: condicional + funções juntos -->
+<!-- objetivo: mostrar como operadores, condicionais e funções trabalham juntos numa validação real -->
+
+# Tudo Junto: Validação de Entrada
+
+Na prática, você vai combinar operadores, condicionais e funções:
+
+```python {1-4|5-13|all}
+def validar_modelo(nome, acuracia):
+    """Valida e classifica um resultado de modelo"""
+    nome_limpo = nome.strip().upper()
+    acuracia_ok = round(acuracia, 3)
+
+    if not nome_limpo:
+        return "ERRO: nome vazio"
+    elif acuracia_ok >= 0.90:
+        return f"{nome_limpo}: EXCELENTE ({acuracia_ok})"
+    elif acuracia_ok >= 0.70:
+        return f"{nome_limpo}: BOM ({acuracia_ok})"
+    else:
+        return f"{nome_limpo}: BAIXO ({acuracia_ok})"
+```
+
+<v-click>
+
+> Isso é o que acontece em pipelines de ML reais: limpa o dado, valida, classifica, formata a saída.
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 20 - EX04: Validador de entrada -->
+<!-- objetivo: praticar integração completa de funções de string, round e condicionais -->
+
+# EX04 - Validador de Entrada
+
+**Em dupla · 10 minutos · Nível 2**
+
+```python
+# EX04 - Validador de Entrada
+def validar_nota(nome_aluno, nota_bruta):
+    """Limpa o nome, arredonda a nota e retorna situação"""
+    # 1. limpe o nome: sem espaços extras, em maiúsculo
+    nome = ___
+
+    # 2. arredonde nota para 1 casa decimal
+    nota = ___
+
+    # 3. classifique: >= 7.0 Aprovado | >= 5.0 Recuperação | senão Reprovado
+    if ___:
+        situacao = ___
+    elif ___:
+        situacao = ___
+    else:
+        situacao = ___
+
+    return f"{nome}: {nota} - {situacao}"
+
+print(validar_nota("  ana  ", 7.666))   # ANA: 7.7 - Aprovado
+print(validar_nota(" bruno ", 4.999))   # BRUNO: 5.0 - Recuperação
+print(validar_nota("carla  ", 3.1))     # CARLA: 3.1 - Reprovado
+```
 
 ---
 layout: brainstorm
@@ -593,60 +661,61 @@ bgPreset: palette
 pulse: true
 ---
 
-<!-- SLIDE 18 - DINAMICA: Purificador de Lista -->
-<!-- objetivo: dinâmica em dupla combinando for + if + listas para resolver problema concreto de filtragem -->
+<!-- SLIDE 21 - DINAMICA: Triagem de Dados -->
+<!-- objetivo: fixar operadores e funções de string em situação lúdica de dupla -->
 
-# Dinâmica em Dupla: Purificador de Lista
+# Dinâmica em Dupla: Triagem de Dados
 
-**15 minutos · Desafio colaborativo**
+**10 minutos · Nível 2**
 
-A lista de notas chegou com problemas — tem `None`, strings vazias e valores absurdos. Filtre só as notas válidas:
+**Colega A:** cria um dado de modelo com nome e acurácia:
 
 ```python
-# Lista com sujeira
-registros = [8.5, None, 7.0, "", 42, 6.5, None, 9.0]
-
-notas_validas = []
-
-for item in registros:
-    # ESCREVA A CONDIÇÃO: apenas float entre 0 e 10
-    if ___:
-        notas_validas.append(item)
-
-print(f"Válidas: {notas_validas}")
-print(f"Removidos: {len(registros) - len(notas_validas)}")
-print(f"Média: {sum(notas_validas) / len(notas_validas):.1f}")
+nome = "  gpt-4 turbo  "
+acuracia = 0.8733
 ```
 
-> Dica: `type(item) == float` verifica o tipo. E o limite 0 a 10?
+**Colega B:** escreve uma função que:
+- Limpa o nome (`.strip().upper()`)
+- Arredonda a acurácia (`round()`)
+- Classifica com `if/elif/else`
+- Retorna uma string formatada com f-string
+
+<v-click>
+
+Depois: troquem de papel. Colega A vira programador.
+
+> Sem listas. Sem loops. Só operadores, funções e condicionais.
+
+</v-click>
 
 ---
-layout: center
+layout: default
 card: true
-bgPreset: animate
+bgPreset: default
 ---
 
-<!-- SLIDE 19 - Síntese Bloco 1 e gancho -->
+<!-- SLIDE 22 - Síntese e gancho para A06 -->
+<!-- objetivo: consolidar o que foi aprendido e preparar o aluno para loops e listas na próxima aula -->
 
-# Loops e Listas: o que fizemos
+# O Que Você Aprendeu Hoje
 
 <v-click>
 
-`for` percorre coleções · `while` repete com condição · `break/continue` controlam o fluxo · listas guardam sequências
+- **Operadores de comparação**: `==`, `!=`, `<`, `>`, `<=`, `>=` retornam `bool`
+- **Operadores lógicos**: `and`, `or`, `not` combinam condições
+- **Condicionais**: `if/elif/else` decide com base em comparações
+- **Funções de string**: `.strip()`, `.upper()`, `.lower()`, `.replace()`, `len()`
+- **Funções de número**: `abs()`, `round()`, `int()`, `float()`, `str()`
 
 </v-click>
 
 <v-click>
 
-> O mesmo loop que percorreu nomes de alunos é o que percorre **tokens numa IA**.
-> O mesmo `append` que montou o boletim é o que guarda o **histórico de treino** de um modelo.
+**A06:** com essas ferramentas na mão, vamos aprender `for`, `while` e, depois, listas.
+Os loops vão repetir tudo isso que você já sabe, muitas vezes, de forma automática.
 
-</v-click>
-
-<v-click>
-
-> Em matemática, o loop `for` sobre uma lista é o equivalente visual de uma **somatória**.
-> No próximo bloco, vamos dar nome matemático às operações que já fizemos em Python.
+> Hoje você aprendeu a tomar decisões. Amanhã você aprende a repetir.
 
 </v-click>
 
@@ -655,7 +724,7 @@ layout: cover
 bgPreset: palette
 ---
 
-<!-- SLIDE 14 - Abertura Bloco 2 -->
+<!-- SLIDE 23 - Abertura Bloco 2 -->
 
 # Bloco 2
 ## Matemática: Aritmética e Álgebra
@@ -734,7 +803,7 @@ bgPreset: default
 
 **Individual · 5 minutos · Nível 1**
 
-Calcule cada linha **na mão** antes de rodar no Colab:
+Calcule cada linha **na mão** antes de rodar no VS Code:
 
 ```python
 # EX04 - Ordem das Operações
@@ -997,6 +1066,6 @@ bgPreset: palette
 
 **Hoje cobrimos:**
 
-`for` · `while` · `break/continue` · listas · aritmética computacional · equação linear · função `y = ax + b`
+operadores · condicionais · `if`/`elif`/`else` · funções de string · funções de número · aritmética computacional · equação linear
 
 *Amanhã (A06 - 13/03): Banco de Dados entra em cena - primeiro contato com SQL.*
