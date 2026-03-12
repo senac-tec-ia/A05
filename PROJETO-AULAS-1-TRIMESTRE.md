@@ -163,18 +163,27 @@ Peso de cada disciplina:
 | UC02 | Vocab avançado de IA em inglês: NLP, Token, LLM, Backpropagation, Epoch, Embedding + 10 termos | ~1,5 |
 | UC04 | Vocabulário avançado de IA (conexão com Python) | ~1 |
 
-### A05 — 12/03 (Qui) ⏳ Amanhã — Composição definida
+### A05 — 12/03 (Qui) ✅ Ministrada
 
-| Bloco | Horário | Disciplina | Conteúdo | HA |
+| Bloco | Horário | Disciplina | Conteúdo real | HA |
 |---|---|---|---|---|
-| 1 | 7h10–9h30 | UC05 Python | Loops (`for`/`while`/`break`/`continue`) + Listas (`append`, indexação, iteração) | 3 |
-| 2 | 9h50–11h10 | UC03 Matemática | **INÍCIO** — Aritmética computacional (int/float/precedência) + Álgebra: variável e equação linear | 2 |
-| 3 | 11h10–12h00 | UC09 Estatística | **INÍCIO** — Função linear `y = ax + b`, coeficientes, gráfico intuitivo + EX06 | 1 |
+| 1 | 7h10–9h30 | UC05 Python | `print()` aprofundado (f-string, sep, end), consolidação de tipos com `type()`, armadilhas de tipo, `float(input())` / `int(input())`, exercício livre: 3 notas via input + cálculo de média | 3 |
+| 2 | 9h50–11h10 | UC03 Matemática | Não chegou até este bloco | 0 |
+| 3 | 11h10–12h00 | UC09 Estatística | Não chegou até este bloco | 0 |
 
-> UC08 (Banco de Dados) postergado para A06 (13/03) Bloco 1 — regra: D08 sempre inicia no Bloco 1.
-> Estrutura completa em `estrutura-aula.md`. Total: ~22 slides Slidev.
+> Ritmo real: ~20 slides em 3 HA. Único exercício completo do dia: EX-print() (sep/end/f-string) + exercício livre do professor.
+> Loops, listas, condicionais, operadores de comparação: NÃO cobertos. Ficam para A06 e além.
 
-### A06 — 13/03 (Sex) ⏳ A definir
+### A06 — 13/03 (Sex) ⏳ Composição definida
+
+| Bloco | Horário | Disciplina | Conteúdo sugerido | HA |
+|---|---|---|---|---|
+| 1 | 7h10–9h30 | UC08 Banco de Dados | **INÍCIO** — O que é BD, tabelas, tipos (relacional vs NoSQL), SQL básico: SELECT, FROM, WHERE | 3 |
+| 2 | 9h50–11h10 | UC01 Fundamentos de Computação | Microsoft Word: criação de documento, formatação de texto, cabeçalho/rodapé, tabelas (Ind. 2) | 2 |
+| 3 | 11h10–12h00 | UC03 Matemática | **INÍCIO** — Aritmética: operações básicas, precedência, divisão inteira vs decimal | 1 |
+
+> UC05 Python NÃO entra em A06: turma precisa absorver o ritmo. Volta em A07 com operadores de comparação e if.
+> UC09 Estatística também fica para A07+ — não colocar UC03 e UC09 na mesma aula (regra cognitiva).
 ### A07 — 19/03 (Qui) ⏳ A definir
 ### A08 — 20/03 (Sex) ⏳ A definir
 ### A09 — 26/03 (Qui) ⏳ A definir
@@ -216,14 +225,14 @@ Peso de cada disciplina:
 |---|---|---|---|---|---|
 | UC01 | Fundamentos de Computação | 13 | 8 | **5** | 🟡 Atenção |
 | UC02 | Inglês Instrumental | 13 | 4,5 | **8,5** | 🟢 OK |
-| UC03 | Fundamentos Matemáticos | 13 | 2 | **11** | 🟡 Iniciou A05 |
+| UC03 | Fundamentos Matemáticos | 13 | 0 | **13** | 🔴 Não iniciada — A06 Bloco 3 |
 | UC04 | Fundamentos e Conceitos de IA | 11 | 6 | **5** | 🟡 Atenção |
-| UC05 | Python | 20 | 5,5 | **14,5** | 🟢 OK |
+| UC05 | Python | 20 | 6 | **14** | 🟢 OK |
 | UC06 | Arquitetura e GPU | 11 | 1 | **10** | 🟡 Atenção |
 | UC07 | Transformação Digital | 20 | 2,5 | **17,5** | 🟢 OK |
-| UC08 | Banco de Dados | 20 | 0 | **20** | 🔴 Iniciar A06 (13/03) |
-| UC09 | Estatística Aplicada | 11 | 1 | **10** | 🟡 Iniciou A05 |
-| **TOTAL** | | **132** | **30,5** | **101,5** | |
+| UC08 | Banco de Dados | 20 | 0 | **20** | 🔴 Iniciar A06 (13/03) Bloco 1 |
+| UC09 | Estatística Aplicada | 11 | 0 | **11** | 🔴 Não iniciada — A07+ |
+| **TOTAL** | | **132** | **29** | **103** | |
 
 > **D08 DEVE iniciar em A06 (13/03) — Bloco 1, 3 HA.**
 

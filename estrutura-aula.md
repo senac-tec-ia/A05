@@ -170,3 +170,40 @@
 | E2 | `estrutura-aula.md` | Metadado UC | Seções sem `**Disciplina (UC):**` identificado | Adicionado em todos os blocos: UC05, UC03, UC09 | ✅ Executado |
 | E3 | `estrutura-aula.md` | Resumo quantitativo | Tabela desatualizada (22 slides, 6 exercícios) | Atualizada: 35 slides, 8 exercícios, 1 dinâmica, 1 debate, 1 tarefa | ✅ Executado |
 | V1 | Diagnóstico | Identificação de UC | UC05 = slides 1-22 (Python); UC03 = slides 23-29 (Matemática); UC09 = slides 30-35 (Estatística) | Nenhuma — classificação correta confirmada | ✅ Conforme |
+
+---
+
+## Registro de Campo — O Que Aconteceu Realmente em 12/03/2026
+
+> **Fonte:** relato direto do professor após a aula.
+> Este registro tem precedência sobre qualquer planejamento anterior presente neste arquivo.
+
+### O que foi efetivamente ministrado (D05-UC03)
+
+- Cobertura real: **~20 slides** em ~3 HA de bloco Python
+- **Único exercício completo da aula:** EX-print() — completar `sep`, `end` e f-string com variáveis
+- **Exercício livre do professor (não estava no deck):** digitar 3 notas com `input()`, converter para `float`, calcular a média manualmente, imprimir com f-string
+
+### Tópicos efetivamente vistos
+
+| Tópico | Status |
+|---|---|
+| `print()` básico | Revisão de A04 |
+| `print()` com f-string, `sep`, `end` | ✅ Introduzido |
+| Tipos de dados: str, int, float, bool + `type()` | ✅ Consolidado |
+| `input()` + `float(input())` e `int(input())` | ✅ Introduzido |
+| Cálculo de média com 3 notas (exercício livre) | ✅ Praticado |
+
+### O que NÃO foi coberto em A05 (estava no plano mas ficou pendente)
+
+- Operadores de comparação (`==`, `!=`, `<`, `>`, `<=`, `>=`)
+- Operadores lógicos (`and`, `or`, `not`)
+- if/elif/else com condições combinadas
+- Funções de string (`.strip()`, `.upper()`, `.lower()`, etc.)
+- Funções de número (`abs()`, `round()`)
+- Loops e listas
+
+### Implicação para A06
+
+> A próxima aula de Python (A06 - 13/03) deve começar com operadores de comparação e if com comparação antes de qualquer loop. Densidade: planejar com no máximo 50% da quantidade de slides original.
+
