@@ -26,6 +26,15 @@ card: true
 bgPreset: default
 ---
 
+<a>https://www.netacad.com/courses/introduction-to-cybersecurity?courseLang=pt-BR&instance_id=b45bd662-d1b0-4591-b7f1-31a76311a207</a>
+
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
 <!-- SLIDE 2 - Revisão rápida: o que você já sabe -->
 <!-- objetivo: ativar memória de A04 sem reintroduzir conteúdo no mesmo nível -->
 
