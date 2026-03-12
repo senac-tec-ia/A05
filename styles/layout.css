@@ -71,6 +71,8 @@
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
+  /* Permite scroll vertical quando o conteúdo ultrapassa a altura do slide */
+  overflow-y: auto;
 }
 
 /* Títulos */

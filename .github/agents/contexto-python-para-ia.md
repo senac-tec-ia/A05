@@ -34,9 +34,9 @@
 | Aula | Data | HA (D05) | Tópicos Principais | Status |
 |---|---|---|---|---|
 | A01 | 26/02/2026 | 0 | Não trabalhada | - |
-| A02 | 27/02/2026 | ~0,5 | Reconhecimento do ambiente: VS Code, Google Colab, GitHub, Jupyter Notebook, onde rodar Python | Ministrada |
+| A02 | 27/02/2026 | ~0,5 | Reconhecimento do ambiente: VS Code, GitHub, Jupyter Notebook, onde rodar Python | Ministrada |
 | A03 | 05/03/2026 | 0 | Não trabalhada | - |
-| A04 | 06/03/2026 | ~2 | Variáveis, tipos (str/int/float/bool), `print()`, `input()`, operadores aritméticos, `if/elif/else`, `def/return`, ecossistema Python (Jupyter/Colab, pip, SQL, Markdown, JSON, YAML) | Ministrada |
+| A04 | 06/03/2026 | ~2 | Variáveis, tipos (str/int/float/bool), `print()` | Ministrada |
 | A05 | 12/03/2026 | ~3 | Operadores de comparação (`==`, `!=`, `<`, `>`, `<=`, `>=`); operadores lógicos (`and`, `or`, `not`); condicionais `if/elif/else` com múltiplas condições; funções de string (`.strip()`, `.upper()`, `.lower()`, `.replace()`, `len()`); funções de número (`abs()`, `round()`, `int()`, `float()`, `str()`); f-string avançada | Ministrada |
 
 ---
@@ -45,14 +45,13 @@
 
 | Conceito | Aula | Nível de Profundidade |
 |---|---|---|
-| Ambientes Python (VS Code, Colab, Jupyter) | A02 | Reconhecimento |
+| Ambientes Python (VS Code, Jupyter) | A02 | Reconhecimento |
 | Variáveis e atribuição | A04 | Introdutório |
 | Tipos de dados: str, int, float, bool | A04 | Introdutório |
-| `print()` e `input()` | A04 | Introdutório |
-| Operadores aritméticos (+, -, *, /, //, %, **) | A04 | Introdutório |
-| Condicionais: `if/elif/else` | A04 | Introdutório |
-| Funções: `def`, parâmetros, `return` | A04 | Introdutório |
-| Ecossistema Python (pip, Jupyter, SQL, Markdown, JSON) | A04 | Reconhecimento |
+| `print()` | A04 | Introdutório|
+|`input()` | A05 | Introdutório |
+| Operadores aritméticos (+, -, *, /, //, %, **) | A05 | Introdutório |
+| Condicionais: `if/elif/else` | A05 | Introdutório |
 | Operadores de comparação: `==`, `!=`, `<`, `>`, `<=`, `>=` | A05 | Introdutório |
 | Operadores lógicos: `and`, `or`, `not` | A05 | Introdutório |
 | Condicionais com múltiplas condições e lógica combinada | A05 | Intermediário |
@@ -63,9 +62,6 @@
 ---
 
 ## Tópicos Pendentes no T1 (11,5 HA restantes)
-
-**Ponto de partida obrigatório: não rever variáveis, tipos, print, input, operadores aritméticos, condicionais, def/return (A04) nem operadores de comparação/lógicos, funções de string/número, f-string (A05). Já consolidados.**
-
 | Seq. | Tópico | HA | Ind. |
 |---|---|---|---|
 | 1 | Loops: `for`, `while`, `break`, `continue` | 2 | 1 |
