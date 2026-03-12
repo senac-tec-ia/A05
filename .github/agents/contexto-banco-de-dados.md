@@ -1,7 +1,7 @@
 # Contexto — Desenvolvimento de Banco de Dados (UC08)
 
 **Código:** UC08  
-**UC:** UC06 — Desenvolvimento de Banco de Dados  
+**UC:** UC08 — Desenvolvimento de Banco de Dados  
 **Disciplina:** Banco de Dados  
 **Carga Total:** 67h (80 HA) | `T1: 26 HA (ajustado: 20) · T2: 27 HA · T3: 27 HA`
 
